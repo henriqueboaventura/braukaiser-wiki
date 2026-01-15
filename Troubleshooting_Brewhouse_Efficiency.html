@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troubleshooting Brewhouse Efficiency - Braukaiser</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="site-header">
-        <div class="header-content">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Troubleshooting Brewhouse Efficiency - Braukaiser</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-content">
             <a href="index.html" class="site-title">
-                <h1>Braukaiser</h1>
-                <span class="tagline">German Brewing and More</span>
+            <h1>Braukaiser</h1>
+            <span class="tagline">German Brewing and More</span>
             </a>
             <nav class="main-nav">
                 <a href="index.html">Home</a>
@@ -19,447 +19,439 @@
                 <a href="The_Science_of_Mashing.html">Science</a>
                 <a href="Glossary_of_German_Brewing_Terms.html">Glossary</a>
             </nav>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <article class="wiki-content">
-            <h1 class="page-title">Troubleshooting Brewhouse Efficiency</h1>
-            <table style="width:800px" border="0">
-<tr>
-<td>
-<p><a href="File:Header_efficiency.jpg.html" class="image"><img alt="Header efficiency.jpg" src="images/Header_efficiency.jpg" width="800" height="188"/></a>
-</p><p>Rather than listing all the factors that can affect the brewhouse efficiency, this article is intended to provide a systematic approach to identify and fix low efficiency related to mashing and lautering.
-</p>
-<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Determining_the_brewhouse_efficiency"><span class="tocnumber">1</span> <span class="toctext">Determining the brewhouse efficiency</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#Measuring_and_Measurement_Errors"><span class="tocnumber">1.1</span> <span class="toctext">Measuring and Measurement Errors</span></a></li>
-<li class="toclevel-2 tocsection-3"><a href="#Measuring_Volumes"><span class="tocnumber">1.2</span> <span class="toctext">Measuring Volumes</span></a></li>
-<li class="toclevel-2 tocsection-4"><a href="#Cooling_a_Hydrometer_Sample"><span class="tocnumber">1.3</span> <span class="toctext">Cooling a Hydrometer Sample</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Check_the_hydrometer"><span class="tocnumber">1.4</span> <span class="toctext">Check the hydrometer</span></a></li>
-<li class="toclevel-2 tocsection-6"><a href="#Calculating_Efficiency"><span class="tocnumber">1.5</span> <span class="toctext">Calculating Efficiency</span></a>
-<ul>
-<li class="toclevel-3 tocsection-7"><a href="#Weight_based_efficiency_calculation"><span class="tocnumber">1.5.1</span> <span class="toctext">Weight based efficiency calculation</span></a>
-<ul>
-<li class="toclevel-4 tocsection-8"><a href="#Dealing_with_kettle_additions_of_sugars_and.2For_extract"><span class="tocnumber">1.5.1.1</span> <span class="toctext">Dealing with kettle additions of sugars and/or extract</span></a></li>
-<li class="toclevel-4 tocsection-9"><a href="#Example"><span class="tocnumber">1.5.1.2</span> <span class="toctext">Example</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-10"><a href="#Gravity_potential_based_efficiency_calculation"><span class="tocnumber">1.5.2</span> <span class="toctext">Gravity potential based efficiency calculation</span></a>
-<ul>
-<li class="toclevel-4 tocsection-11"><a href="#Dealing_with_Kettle_Additions_of_Sugars_and.2For_Extract_2"><span class="tocnumber">1.5.2.1</span> <span class="toctext">Dealing with Kettle Additions of Sugars and/or Extract</span></a></li>
-<li class="toclevel-4 tocsection-12"><a href="#Example_2"><span class="tocnumber">1.5.2.2</span> <span class="toctext">Example</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-13"><a href="#How_good_is_my_efficiency.3F"><span class="tocnumber">2</span> <span class="toctext">How good is my efficiency?</span></a></li>
-<li class="toclevel-1 tocsection-14"><a href="#The_concept_of_conversion_and_lauter_efficiency"><span class="tocnumber">3</span> <span class="toctext">The concept of conversion and lauter efficiency</span></a></li>
-<li class="toclevel-1 tocsection-15"><a href="#Determining_Conversion_Efficiency"><span class="tocnumber">4</span> <span class="toctext">Determining Conversion Efficiency</span></a></li>
-<li class="toclevel-1 tocsection-16"><a href="#Evaluating_conversion_efficiency"><span class="tocnumber">5</span> <span class="toctext">Evaluating conversion efficiency</span></a></li>
-<li class="toclevel-1 tocsection-17"><a href="#Determining_Lauter_efficiency"><span class="tocnumber">6</span> <span class="toctext">Determining Lauter efficiency</span></a>
-<ul>
-<li class="toclevel-2 tocsection-18"><a href="#Calculating_Lauter_efficiency_.28batch_sparging.29"><span class="tocnumber">6.1</span> <span class="toctext">Calculating Lauter efficiency (batch sparging)</span></a></li>
-<li class="toclevel-2 tocsection-19"><a href="#Evaluating_the_batch_sparging_lauter_efficiency"><span class="tocnumber">6.2</span> <span class="toctext">Evaluating the batch sparging lauter efficiency</span></a></li>
-<li class="toclevel-2 tocsection-20"><a href="#Testing_the_lauter_efficiency_.28fly_and_batch_sparging.29"><span class="tocnumber">6.3</span> <span class="toctext">Testing the lauter efficiency (fly and batch sparging)</span></a>
-<ul>
-<li class="toclevel-3 tocsection-21"><a href="#Example_3"><span class="tocnumber">6.3.1</span> <span class="toctext">Example</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-22"><a href="#Evaluating_Lauter_efficiency"><span class="tocnumber">6.4</span> <span class="toctext">Evaluating Lauter efficiency</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-23"><a href="#Example:_Making_sense_of_the_numbers"><span class="tocnumber">7</span> <span class="toctext">Example: Making sense of the numbers</span></a></li>
-<li class="toclevel-1 tocsection-24"><a href="#Sources"><span class="tocnumber">8</span> <span class="toctext">Sources</span></a></li>
-</ul>
-</div>
-
-<h1><span class="mw-headline" id="Determining_the_brewhouse_efficiency">Determining the brewhouse efficiency</span></h1>
-<p>Before we can look for the causes of low efficiency we need to determine it. Since a number of different definitions exist, it is possible that the actual efficiency is in an acceptable range but was calculated based on a different efficiency formula which returned a lower result. Other error factors are incorrect gravity, volume or weight measurements.
-</p><p>In this analysis we will focus on the efficiency into the boil kettle. The efficiency doesn’t change during the boil as no extract is lost (except for the precipitation of a fraction of the proteins in the wort). Efficiency shortcomings after the boil (i.e. transfer to the fermenter) are obvious as they are proportional to the amount of wort that is lost. For a list of various efficiency definitions see the <a href="Understanding_Efficiency.html" title="Understanding Efficiency">Understanding Efficiency</a>.
-</p>
-<h2><span class="mw-headline" id="Measuring_and_Measurement_Errors">Measuring and Measurement Errors</span></h2>
-<p>Before the efficiency can be calculated, 3 things need to be measured on brew day:
-</p>
-<ul><li> amount of grain used</li>
-<li> specific gravity or strength of the collected or finished wort</li>
-<li> volume of the collected or finished wort</li></ul>
-<p>It is important to be reasonably accurate when measuring these values. The more precise the measurements are, the more precise the calculated efficiency will be. As an example: If the grain weight has an error of 5% (which is +/- 200g for a 4.0kg grist or 0.5 lb for 10lb), the calculated efficiency will also have a 5% error, i.e. a calculated efficiency of 70% could actually be between 66% and 74%. The same applies to volume and gravity or strength measurements. (<i>Note: that a 5% error on 70% is +/- 3.5% since it is 5% of 70% and not 5% of 100%</i>)
-</p><p>The following measurement errors can be seen as reasonable:
-</p>
-<ul><li> 1% error for the grain weight. This means +/- 40g for a 4.00 kg grist or 0.1 lb for 10 lb</li>
-<li> 2% error for the specific gravity or wort strength. This means +/- 0.25 for 12 Plato or +/- 1 point for 1.050 SG </li>
-<li> 2% error on the volume measurement. This means +/- 0.5l on 25l or +/- 0.5 qt on 6 gal</li></ul>
-<p>With them the efficiency can be calculated with 5% accuracy.
-</p>
-<h2><span class="mw-headline" id="Measuring_Volumes">Measuring Volumes</span></h2>
-<p>When measuring volumes on brew day, the temperature based expansion of water should be taken into account and all measured volumes should be corrected such that they represent the volume at room temperature. Since wort is mostly water, what is true for water is also true for wort. At 100 C or 212 F a given amount of water/wort has about 4% more volume than at room temperature. This means that 25 liters or quarts of wort at 100C/212F are actually 24 liters or quarts. This is a difference of 1 liter or quart and fairly significant for precise efficiency calculations. Because it results in more volume than actual, it results in a higher than actual calculated efficiency. To correct a volume measurement made at near boiling or boiling temperatures, multiply with 0.96.
-</p><p>At mash and lauter temperatures (~ 70C / 160F) the wort volume is only by about 3% larger than at room temperature. To correct the volume measurement, multiply with 0.97.
-</p><p>Also, take the time to calibrate or check your means of measuring the volume measurement in the boil kettle. Be it a dip-stick or markings on the kettle. To be off by 1 qt for a 6 gal is a 4% error in the calculated efficiency.
-</p>
-<h2><span class="mw-headline" id="Cooling_a_Hydrometer_Sample">Cooling a Hydrometer Sample</span></h2>
-<p>Samples for taking hydrometer readings need to be cooled to either the hydrometers calibration temperature or at least a temperature at which it is safe to use a hydrometer. If the temperature of the sample is too hot, the glass of the hydrometer may not withstand the stress. If the sample temperature is not the calibration temperature of the hydrometer a conversion table can be used to correct the reading. Here is a [<a rel="nofollow" class="external text" href="https://web.archive.org/web/20220711190909/http://www.braukaiser.com/documents/hydrometer_conversion_tables.pdf">PDF</a> that shows a number of conversion tables that can be used for converting between specific gravity and Plato and also for temperature correction.
-</p><p>The cooling of the sample needs to happen in a manner that does not allow for the excessive evaporation of water as that would increase the samples sugar content and specific gravity. I have noticed that chilling the sample in an open bowl can increase the gravity by as much as 4 points. As a result I always cool my samples in a small lid covered jar set in ice water.
-</p>
-<h2><span class="mw-headline" id="Check_the_hydrometer">Check the hydrometer</span></h2>
-<p>If you have already checked the calibration of the hydrometer you can proceed to <a href="#Calculating_Efficiency">Calculating Efficiency</a>
-</p><p>To check the hydrometer use it in water at the calibration temperature that is noted on the scale. In water the hydrometer should read 1.000 or 0.0 Bailling/Brix/Plato. If another reference point is desired, dissolve 40g of table sugar in 160g of water. The resulting solution has a sugar content of 20 Plato or 1.083 SG. But such a 2 point calibration is generally not necessary for hydrometers.
-</p><p>If the hydrometer doesn't read 1.000 SG or 0.0 Plato in water, it doesn't have to be thrown out. Simply remember to always subtract the difference to 1.000 SG or 0.0 Plato from every hydrometer reading.
-</p><p>Examples:
-</p>
-<ul><li> If the hydrometer reads 1.002 in water, subtract 2 gravity points (i.e. 0.002) from every hydrometer reading</li>
-<li> If the hydrometer reads 0.998 in water, add 2 gravity points to every hydrometer reading</li></ul>
-<h2><span class="mw-headline" id="Calculating_Efficiency">Calculating Efficiency</span></h2>
-<p>To calculate efficiency two distinct approaches exist. The weight based approach calculates the weight of the extract that is present in the collected wort and puts it in relation to the total extract weight that was available in the grist. The gravity potential based approach puts the specific gravity that was achieved in relation to the maximum gravity potential that the grist has for the given wort volume. Both approaches are explained below and either one can be chosen.
-</p><p>In addition to the two approaches shown here, the <a rel="nofollow" class="external text" href="http://braukaiser.com/documents/efficiency_calculator.xls">Efficiency-Troubleshooting-Spreadsheet</a> can also be used to calculate the brewhouse efficiency.
-</p>
-<h3><span class="mw-headline" id="Weight_based_efficiency_calculation">Weight based efficiency calculation</span></h3>
-<p>The weight based efficiency calculation is best done with metric measurements. If your measurements are not yet metric, please convert them using these formulas
-</p>
-<ul><li> weight in kg = weight in lb * 0.45</li>
-<li> volume in liter = volume in gal * 3.78 = volume in quart * 0.95</li>
-<li> gravity in Plato = gravity points * 4 (this is simplified, but good enough for average specific gravities)</li></ul>
-<p>To calculate the efficiency, we need to calculate the amount of extract that is present in the collected wort. Because this amount doesn't change during the boil, unless additional malt extract or sugar is added during the boil, it doesn't matter if it is calculated based on pre or post boil measurements. Just make sure that the volumes are corrected for temperature (see above):
-</p>
-<dl><dd><b><tt>kettle extract weight in kg = volume in liter * specific gravity * gravity in Plato / 100 </tt></b></dd></dl>
-<p>Multiplying the volume with the specific gravity of the wort, which is basically the density of the wort, gives the weight of the wort. That is then multiplied by the wort strength expressed in Plato which expresses how much of that wort weight comes from extract (sugars, proteins, etc.).
-</p><p>The other weight that is needed is the weight of the extract that can theoretically be extracted from the grist. When a maltster tests the malt quality one of the properties determined is the fine grind extract. It is determined by grinding the malt with a very tight mill gal (0.2 mm) mashing it with a step mash program called a Congress Mash. After that the non dissolved matter is separated from the wort. The amount of extract in that wort is then determined and expressed as percent of the original grain weight. Luckily for us, the amount of extract present in various grains (especially base malts) is fairly constant and we don't necessarily need to acquire an analysis sheet for all the malts that we used for our mash. Here is a table that lists commonly used types of malt and average fine grind extract percentages.
-</p><p>Note, that the extract content is usually gives as percentage of the dry malt weight but that as it is stored and sold with a moisture content (MC) of 3-5%. This should be taken into account when determining the actual extract content in the malt. I.e. the dry basis extract percentage needs to be multiplied with (100% - MC)/100%.
-</p>
-<table border="1">
-<tr>
-<th> Malt type
-</th>
-<th> fine grind extract content
-</th>
-<th> corrected for ~ 4% moisture
-</th></tr>
-<tr>
-<td> 2-row brewers malt                   </td>
-<td>  80% </td>
-<td> 77%
-</td></tr>
-<tr>
-<td> 6-row brewers malt                   </td>
-<td>  78% </td>
-<td> 75%
-</td></tr>
-<tr>
-<td> Pilsner, Vienna, Munich              </td>
-<td>  80% [WEYERMANN, BEST MALZ] </td>
-<td> 77%
-</td></tr>
-<tr>
-<td> Pilsner Briess                       </td>
-<td>  80% </td>
-<td> 77%
-</td></tr>
-<tr>
-<td> Munich malt Briess                   </td>
-<td>  74-76% </td>
-<td> 71–73%
-</td></tr>
-<tr>
-<td> Specialty malts (crystal and roased) </td>
-<td> 72 - 75&#160;% [BRIESS, WEYERMANN] </td>
-<td> 69-72%
-</td></tr>
-<tr>
-<td> Carafa                               </td>
-<td>  65% [WEYERMANN] </td>
-<td> 62%
-</td></tr>
-<tr>
-<td> oat, barley, corn and wheat flakes   </td>
-<td>  70% [BRIESS] </td>
-<td> 67%
-</td></tr>
-<tr>
-<td> rice flakes                          </td>
-<td>  65% [BRIESS] </td>
-<td> 62%
-</td></tr></table>
-<p>The weight of extract in the grist is calculated as
-</p>
-<dl><dd><b><tt>extract in grist in kg = weight of malt 1 in kg * extract content grain 1 in&#160;% / 100 + weight of malt 2 in kg * extract content grain 2 in&#160;% / 100 ... </tt></b></dd></dl>
-<p>If only little (&lt;5%) specialty malts (crystal, roasted malts and Carfa)  were used, the formula can be simplified to
-</p>
-<dl><dd><b><tt>extract in grist in kg = weight of grist in kg * 0.8</tt></b></dd></dl>
-<p>The factor of 0.8 represents the average 80% extract content and is a good enough assumption for most base malts.
-</p><p>Now that the weight of the extract in the collected wort and the weight of the extract initially present in the grain are known we can calculate the brewhouse efficiency as
-</p>
-<dl><dd><b><tt>brewhouse efficiency in&#160;% = 100% * kettle extract weight in kg / extract in grist in kg</tt></b></dd></dl>
-<h4><span class="mw-headline" id="Dealing_with_kettle_additions_of_sugars_and.2For_extract">Dealing with kettle additions of sugars and/or extract</span></h4>
-<p>Some recipes require the addition of sugars or additional extract in the brew kettle. These additions can distort the calculated brewhouse efficiency if that efficiency is based on post boil measurements. To compensate for that, simply subtract the weight of the added sugar/extract from the calculated kettle extract weight before calculating the brewhouse efficiency. In case of liquid malt extract, subtract only 80% of the extract weight that was added. Or work with gravity and volume measurements that were taken before the sugar/extract was added.
-</p>
-<h4><span class="mw-headline" id="Example">Example</span></h4>
-<pre>grist weight: 4.5 kg Pilsner malt
-cold post boil volume: 21 liter
-post boil gravity: 1.048 / 12 Plato
-
-kettle extract weight = 21 l * 1.048 * 12 / 100 = 2.64 kg
-extract weight in grist = 4.5 kg * 80% / 100% = 3.6 kg
-brewhouse efficiency = 100% * 2.64 kg / 3.6 kg = 73&#160;%
-</pre>
-<p>Continue to <a href="#How_good_is_my_efficiency.3F">How good is my efficiency?</a> to see how this efficiency stacks up against commonly achieved brewhouse efficiencies.
-</p>
-<h3><span class="mw-headline" id="Gravity_potential_based_efficiency_calculation">Gravity potential based efficiency calculation</span></h3>
-<p>This type of calculation is best done with US units. If the measurements are not already available as such, used the following formulas to convert the numbers:
-</p>
-<ul><li> volume in gallons = volume in liter / 3.78</li>
-<li> gravity in gravity points = extract in Plato * 4</li>
-<li> weight in lb = weight in kg / 0.45</li></ul>
-<p>This calculation takes a different approach. It determines how many gravity points (the digits after the 1. in the specific gravity value) could one get from the given grist and measured wort volume with 100% brewhouse efficiency. The actual brewhouse efficiency is then the actually achieved gravity points expressed as a percentage of that theoretical maximum. To calculate the theoretical maximum, we need to know the wort volume, the weight of the grist and the gravity potential (i.e. how many gravity points can be contributed) of that grist. The latter is expressed as points per pound and gallon (pppg) and can easily be derived from the extract percentage that is listed for malts. Pure table sugar is completely soluble and adding one pound of it to a volume of water that results in 1 gal of sugar solution will result in a solution with a specific gravity of 1.046. This means that sugar has a potential of 46 pppg. Malt and many adjuncts used in mashing are not completely soluble. Only their extractable weight (Fine grind extract corrected for malt moisture content) can me made soluble in mashing. To determine their gravity potential we simply multiply the gravity potential of sugar (46 pppg) with the extract percentage from the malt spec. This has been done in the following table
-</p><p><br/>
-</p>
-<table border="1">
-<tr>
-<th> Malt type
-</th>
-<th> fine grind extract potential
-</th>
-<th> corrected for ~4% moisture
-</th></tr>
-<tr>
-<td> 2-row brewers malt                </td>
-<td>   37 pppg </td>
-<td> 36 pppg
-</td></tr>
-<tr>
-<td> 6-row brewers malt                </td>
-<td>  36 pppg </td>
-<td> 35 pppg
-</td></tr>
-<tr>
-<td> Pilsner, Vienna, Munich           </td>
-<td>   37 pppg [WEYERMANN, BEST MALZ] </td>
-<td> 36 pppg
-</td></tr>
-<tr>
-<td> Pilsner Briess                    </td>
-<td>  37 pppg </td>
-<td> 36 pppg
-</td></tr>
-<tr>
-<td> Munich malt Briess                </td>
-<td>  34-35 pppg </td>
-<td> 33-34 pppg
-</td></tr>
-<tr>
-<td> Specialty malts (crystal and roased) </td>
-<td> 33 - 35 pppg [BRIESS, WEYERMANN] </td>
-<td> 32-34 pppg
-</td></tr>
-<tr>
-<td> Carafa                            </td>
-<td> 30 pppg [WEYERMANN] </td>
-<td> 29 pppg
-</td></tr>
-<tr>
-<td> oat, barley, corn and wheat flakes</td>
-<td> 32 pppg [BRIESS] </td>
-<td> 31 pppg
-</td></tr>
-<tr>
-<td> rice flakes                       </td>
-<td> 30 pppg [BRIESS] </td>
-<td> 29 pppg
-</td></tr></table>
-<p>The theoretical maximum for the wort gravity is:
-</p>
-<dl><dd><b><tt>maximum gravity points = (weight grain 1 in lb * potential grain 1 in pppg + weight grain 2 in lb * potential grain 2 in pppg ...) / volume in gal</tt></b></dd></dl>
-<p>If only a small amount of specialty grains were used, this simplified equation can be used
-</p>
-<dl><dd><b><tt>maximum gravity points = weight of grist in lb * 37 pppg / volume in gal</tt></b></dd></dl>
-<p>To get the efficiency we put the actually measured gravity points in relation to the maximum gravity points
-</p>
-<dl><dd><b><tt>brewhouse efficiency = 100% * actual gravity points / maximum gravity points</tt></b></dd></dl>
-<h4><span class="mw-headline" id="Dealing_with_Kettle_Additions_of_Sugars_and.2For_Extract_2">Dealing with Kettle Additions of Sugars and/or Extract</span></h4>
-<p>Some recipes require sugars or additional extract to be added in the brew kettle. These additions can distort the calculated brewhouse efficiency if that efficiency is based on post boil measurements. To compensate for that, simply subtract the gravity points gained from the added sugar/extract from the actual gravity points before calculating the brewhouse efficiency. For dry extract or sugar the gravity points to subtract can be calculated as:
-</p>
-<dl><dd><b><tt>gravity points from dry kettle extracts = extract weight in lb * 46 pppg / kettle voulme in gal</tt></b></dd></dl>
-<p>In case of liquid extract use 37 pppg since liquid extract are 80% extract and 20% water. Or work with gravity and volume measurements that were taken before the sugar/extract was added.
-</p>
-<h4><span class="mw-headline" id="Example_2">Example</span></h4>
-<pre>grist weight = 10 lb (Pilsner malt)
-cold post boil volume = 5.5 gal
-post boil gravity = 1.048 (48 gravity points)
-
-maximum gravity points from grist = 10 lb * 37 pppg / 5.5 gal = 67.3
-brewhouse efficiency = 100% * 48 / 67.3 = 71&#160;%
-</pre>
-<h1><span class="mw-headline" id="How_good_is_my_efficiency.3F">How good is my efficiency?</span></h1>
-<p>Though a lot of opinions exist on what efficiency numbers are good and which ones are bad, let me try to give some guidelines in assessing the brewhouse efficiency. The following table lists a range of brewhouse efficiencies that can be expected from various brewing systems. Note that these are efficiencies measured in the boil kettle and not in the fermenter:
-</p>
-<table border="1">
-<tr>
-<th> brewing system
-</th>
-<th> typical brewhouse efficiency range
-</th></tr>
-<tr>
-<td> Large scale commercial brewing                </td>
-<td>   92 - 98&#160;% [HUPPMANN]
-</td></tr>
-<tr>
-<td> Fly sparging                </td>
-<td>  80 - 95%
-</td></tr>
-<tr>
-<td> Batch sparging           </td>
-<td>   75% - 90%
-</td></tr>
-<tr>
-<td> No sparge                    </td>
-<td>  65% - 80%
-</td></tr></table>
-<p>Another factor for the achievable efficiency, aside from the lauter method, is the amount of grain and the pre-boil volume. The larger the grist in relation to the batch size, the more wort gets trapped in that grist after running off. As a result larger beers generally show lower brewhouse efficiency. If more water is used for sparging, more of the extract can be washed out of the grain. The result is higher brewhouse efficiency but also a higher pre-boil volume which requires longer or more intensive boiling. That and the increased sparging can be detrimental to the beer quality and should not be used to fix an efficiency problem.
-</p><p>I would consider an efficiency (assuming a regular gravity beer: up to 1.060 / 16 Plato) that is below the ranges given above as problematic and worth investigating. Only when it is known where in the process the efficiency is lost a decision can be made about if and how the efficiency should be improved. While a low efficiency can be an indication of a suboptimal mashing and lautering process, Very high efficiency does not necessarily mean the best beer possible. The latter statement is targeted at over-sparging which can lead to the excessive extraction of unwanted grain compounds (in particular tannins from the husks).
-</p>
-<h1><span class="mw-headline" id="The_concept_of_conversion_and_lauter_efficiency">The concept of conversion and lauter efficiency</span></h1>
-<p>There are 2 main processes that affect the brewhouse efficiency: mashing and lautering. Mashing is a mainly bio-chemical process during which the extractable portion of the grain is made soluble through enzymatic and physical processes. The result is sweet wort in which sugars, proteins and other compounds (the sum of all that is called extract) from the grain have been dissolved. During lautering, a physical process, this sweet wort and the extract contained in it is transferred to the boil kettle while the insoluble parts of the grain (husks, cell wall structure of the endosperm, coagulated protein, etc.) are left behind. Both processes are influenced by different factors and should be evaluated separately from each other. Because of that I want to introduce the following formula for brewhouse efficiency or efficiency into the kettle:
-</p>
-<dl><dd><b><tt>brewhouse efficiency = conversion efficiency * lauter efficiency</tt></b></dd></dl>
-<p>The subsequent sections will measure and evaluate the conversion and lauter efficiency separate from each other which gives shows where in the process efficiency is lost and which process step actually needs attention.
-</p>
-<h1><span class="mw-headline" id="Determining_Conversion_Efficiency">Determining Conversion Efficiency</span></h1>
-<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="File:First_wort_gravity.gif.html" class="image"><img alt="" src="images/First_wort_gravity.gif" width="300" height="517" class="thumbimage"/></a>  <div class="thumbcaption">Table 1 - Extract content or gravity of the first wort based on the mash thickness. 100% mash efficiency, 80% fine grind extract and 4% moisture content of the malt were assumed for the grist</div></div></div>
-<p>To determine the conversion efficiency we simply need to measure the gravity (i.e. extract content) of the mash liquid once the mash is complete. Based on the amount of mash liquid that was used and the amount of extract that was potentially extractable from the grain, we can determine what the extract concentration in the mash should be for 100% conversion efficiency. Use the following formula or the table to the right to calculate the first wort extract content or specific gravity that would be achieved with 100% conversion efficiency
-</p><p><a href="File:Formula_FW_max.gif.html" class="image"><img alt="Formula FW max.gif" src="images/Formula_FW_max.gif" width="341" height="49"/></a>
-</p><p>Calculating the specific gravity of the first wort based on the gravity potential of the grist is more complicated since the volume to be used in that equation is not the volume of the water used but the volume of the resulting wort which is larger due to the dissolved extract and more difficult to measure. The easiest way is to calculate the water grist ratio and use the table to the right.
-</p><p>The conversion efficiency can be estimated with this simple formula. See <a href="Understanding_Efficiency.html#Measuring_conversion_efficiency" title="Understanding Efficiency">Measuring_conversion_efficiency</a> for a more accurate formula.
-</p><p><a href="File:Formula_CE_simple.gif.html" class="image"><img alt="Formula CE simple.gif" src="images/Formula_CE_simple.gif" width="218" height="52"/></a>
-</p><p>or
-</p><p><a href="File:Formula_CE_simple_from_sg.gif.html" class="image"><img alt="Formula CE simple from sg.gif" src="images/Formula_CE_simple_from_sg.gif" width="225" height="48"/></a>
-</p><p>The <a rel="nofollow" class="external text" href="http://braukaiser.com/documents/efficiency_calculator.xls">Efficiency-Troubleshooting-Spreadsheet</a> can also be used to calculate the conversion efficiency from the grist weight, water used and first wort extract/gravity.
-</p><p>When measuring the first wort gravity or strength make sure you get a sample after recirculating the wort through the grain in order to prevent measuring wort that was simply trapped under the false bottom or in the manifold. If cooling of the sample is necessary it should be done in a way that minimizes evaporation.
-</p><p>The conversion efficiency should be close to 100% as this would be an indication that all mash parameters (crush, temperature, pH, time, diastatic power, water/grist ratio, mash schedule) were in the correct range for full conversion. Weather or not they were in the correct range for other worth parameters (e.g. fermentability) cannot be determined at this point. If the conversion efficiency is satisfactory proceed to <a href="#Determining_Lauter_efficiency">Determining Lauter efficiency</a>, otherwise read on to learn about parameters that affect the conversion efficiency.
-</p>
-<h1><span class="mw-headline" id="Evaluating_conversion_efficiency">Evaluating conversion efficiency</span></h1>
-<p>If the conversion efficiency is less than 90-95%, test the wort and spent grain for starch with iodine. Wort is best tested for starch on a piece of chalk or drywall (<a href="Starch_Test.html" title="Starch Test">Starch Test</a>) and to test the spent grain pick up a few pieces, rub them between two fingers and add a drop of iodine solution. If they turn black-purple, they still contain starch (wash hands afterwards). If there is indeed starch in the spent grain and the conversion efficiency is especially poor (&lt;80%), it is oftentimes the case that you can see dry starch in the middle of larger grits. That unconverted starch is the cause of the low conversion efficiency and can have multiple causes:
-</p>
-<ul><li> <b>crush:</b> If the crush is too coarse the pieces of endosperm will be too large for the gelatinization and enzymes to convert them at the chosen saccharification temperature and time. Evaluate the crush. Are there any uncrushed kernels? Are there any kernels that are cracked, but the endosperm doesn't come out easily? But keep in mind, that there is a limit in how much a tighter crush can improve conversion efficiency (especially if other mash parameters are off as well) and that it can be overdone. From my experience I suggest a crush done with a mill gap spacing between 0.5 and 0.8 mm (20 - 32 mil).</li></ul>
-<ul><li> <b>temperature:</b> While any temperature below the upper temperature limit for the amylase enzymes (about 80C/175F) can lead to full conversion, only temperatures between ~63C/145F and 80C/175F are known to fully convert a mash with practical saccharification rest time. The exact temperature that should be chosen for the saccharification rest depends on the mash schedule, rest time, attenuation target and diastatic power of the malt. Check your thermometer against another one or at least against ice water (0C/32F) and boiling water (100C/212F; if you are close to see level).</li></ul>
-<ul><li> <b>pH:</b> the enzymes, that are responsible for starch conversion, are not only sensitive to temperature but they are also sensitive to pH. The brewing literature and small scale mashing experiments (<a href="Limit_of_attenuation_experiment.html" title="Limit of attenuation experiment" class="mw-redirect">Limit of attenuation experiment</a>) show that the mash pH should be between 5.3 and 5.7 (measured at room temperature) for optimal conversion efficiency. The mash pH is determined by the water/mash's mineral content and the gist composition. Check your waters residual alkalinity (RA) with John Palmer's <a rel="nofollow" class="external text" href="http://howtobrew.com/section3/Palmers_Mash_RA_ver2c.xls">residual alkalinity spreadsheet</a> or, even better, check the mash pH. You won't need to buy a pH meter for this, using precision test strips like EMD's colorpHast strips are good enough.</li></ul>
-<ul><li> <b>diastatic power:</b> this can be a problem with grists containing large amounts of highly kilned malts (e.g. dark Munich malt) or unmalted grains. Highly kilned malts contain fewer enzymes because the kilning process damaged more of them and the use of unmalted grains (e.g. rice or corn) dilutes the enzymatic power of the mash because they only add, if any, a small amount of enzymes to the mash. If the amount of enzymes in the mash is low, the mash may not be able to convert itself or the acceptable ranges for the other mash parameter got much smaller. A mash with low enzyme content may just need more time or a different mash schedule (step mash v.s. Single infusion mash) to be able to fully convert. If this is suspected to be the culprit, choose a different mash schedule or replace some of the enzymatic weaker malts with enzymatic stronger (e.g. Pale or Pilsner) malt.</li></ul>
-<ul><li> <b>time:</b> the longer the mash rests while the enzymes are still active, the more of the starch can be converted. Once all starch has been converted time will not have an effect on the conversion efficiency anymore. But it may still have an effect on other wort properties like fermentability for example which is why we don't just stop mashing once the mash is converted. When mashing at lower temperatures or with enzymatic weak grists extending the saccharification rest length from 60min to 90min or longer may just do the trick for getting to complete conversion and satisfactory conversion efficiency.</li></ul>
-<ul><li> <b>water/grist ratio:</b> the gelatinization and enzymatic activity require free water and in order to be fully completed, enough water needs to be available. This sets the lower limit of water/grist ratio for mashing. According to Briggs this lower limit is around 2 l/kg or 1 qt/lb [Briggs, 2004]. If too much water exists in the mash the enzymes may be to spread out to efficiently work on the starch. But that only happens at very thin mashes. It has been reported that even mashes as thin as 6 l/kg or 3 qts/lb work well. Based on this, it is unlikely that a mash was too thin for conversion.</li></ul>
-<ul><li> <b>mash schedule:</b> Enzymatic weak mashes, mashes with undermodified malts (which are hard to find these days) or adjunct mashes may not fully convert when using the simple single infusion mash schedule. For such mashes it may be necessary to boil some of the grains/malt (decoction or cereal mashes) or use different saccharification rest temperatures. For enzymatic weak mashes it may be beneficial to add a dextrinization rest between 70C/158F and 75C/166F to speed up the alpha amylase and get the last bit of starch converted. But note that if there is a significant efficiency gain through this higher temperature rest it will be in the form of mostly unfermentable extract and thus raise the fermentability of the wort. This may need to be accounted for by using a lower temp saccharification rest.</li></ul>
-<ul><li> <b>dough balls:</b> those can happen when the starch around a ball of malt gelatinizes and prevents water from reaching the malt inside that dough ball. If enzymatic activity is strong enough the gelatinized starch that is covering the ball will be converted and dissolved and eventually make way for the water to reach the dry malt inside. If that is not happening it causes conversion efficiency losses and even if the starch inside the dough balls is eventually freed, it may happen too late for full conversion of this starch. To avoid this problem make sure the mash is well stirred at dough-in. I also found that if the strike water temperature is above 60-65C (140-150F) adding grain to water reduces dough balls. At temperatures below this range barley starch doesn't gelatinize yet and dough balls are not likely to form.</li></ul>
-<h1><span class="mw-headline" id="Determining_Lauter_efficiency">Determining Lauter efficiency</span></h1>
-<p>There 2 ways to determine the Lauter efficiency. If batch sparging is used, it can be estimated from the total amount of water that was used and the total volume of wort that was collected. For fly and batch sparging it can also be estimated from measuring the extract that is still left in the grains after sparging.
-</p>
-<h2><span class="mw-headline" id="Calculating_Lauter_efficiency_.28batch_sparging.29">Calculating Lauter efficiency (batch sparging)</span></h2>
-<p>The concept of calculating the lauter efficiency for batch sparging has been demonstrated in <a href="Batch_Sparging_Analysis.html" title="Batch Sparging Analysis">Batch Sparging Analysis</a>. As this is a rather involved an cumbersome process I suggest taking accurate measurements of:
-</p>
-<ul><li> grain weight and extract content of that grain (see above)</li>
-<li> total water volume used for mashing and sparging measured at room temperature. This does not include water added to compensate for decoction boil-off if applicable.</li>
-<li> the total volume of wort collected and the temperature at which it was measured.</li>
-<li> the extract content (Plato) or specific gravity of the wort that was collected. Make sure the wort is well mixed to prevent wort stratification.</li>
-<li> If even higher precision for the calculation is desired you can also note the collected wort volumes and temperatures after each run-off. If that is not done, equal run-off sizes will be assumed.</li></ul>
-<p>And then using the <a rel="nofollow" class="external text" href="http://braukaiser.com/documents/batch_sparging_efficiency_analysis.xls">Batch-Sparging-Efficiency-Spreadsheet</a> spreadsheet to calculate the theoretical lauter efficiency.
-</p>
-<h2><span class="mw-headline" id="Evaluating_the_batch_sparging_lauter_efficiency">Evaluating the batch sparging lauter efficiency</span></h2>
-<p>If the theoretical lauter efficiency isn't close to the lauter efficiency determined from the conversion efficiency and brewhouse efficiency, the batch sparging process was suboptimal. Have a look at the following:
-</p>
-<ul><li> Was the mash thoroughly stirred after the addition of grain? It is easily possible for a tick portion of the mash to remain undisturbed at the bottom or in corners of the mash/lauter tun.</li>
-<li> Where the measurements done correctly or did you forget about water additions or wort that was collected but not added to the brew kettle?</li>
-<li> Did the mash drain completely before new sparge water was added? Though that is not necessary for batch sparging, it was assumed for the calculation of the batch sparge lauter efficiency.</li></ul>
-<p>Run-off speed and rest time after stirring the mash don't have any impact on the lauter efficiency in batch sparging.
-</p>
-<h2><span class="mw-headline" id="Testing_the_lauter_efficiency_.28fly_and_batch_sparging.29">Testing the lauter efficiency (fly and batch sparging)</span></h2>
-<p>To some extend, the lauter efficiency can also be measured. This measurement tries to estimate the amount of extract left in the grain by diluting it with a known amount of water and measuring the extract/gravity of the resulting wort. Based on that the percentage of extract that remained in the lautertun can be estimated. While a more detailed formula can be found in [Understanding Efficiency] (not yet available), a simple table is used here.
-</p>
-<div class="thumb tright"><div class="thumbinner" style="width:581px;"><a href="File:Table_for_estimating_lauter_loss.gif.html" class="image"><img alt="" src="images/Table_for_estimating_lauter_loss.gif" width="579" height="534" class="thumbimage"/></a>  <div class="thumbcaption">Table 2 - Estimating the brewhouse efficiency loss in the lauter</div></div></div>
-<p>To use that table to estimate use the following procedure:
-</p>
-<ul><li> add 0.5, 1.0, 1.5 or 2.0 quart of water per pound of initial grist weight. This water doesn't have to be hot. Cold tap water works just fine. You are not going to make beer from this. This is just for testing purposes. Make sure the mash is thin enough to be stirred very well. For metric measurements add 1 or 2 l/kg grist weight</li>
-<li> stir the mash well and make sure you get the mash stuck in corners and at the bottom of the lautertun</li>
-<li> take a hydrometer (or refractometer) reading of the mash liquid</li>
-<li> correct that reading for temperature and look it up in the table. The number in the column corresponding to the amount of water that was added shows the brewhouse efficiency percentage points that were lost in lauter tun. Subtract that from the conversion efficiency and divide the result by the conversion efficiency to find the lauter efficiency.</li></ul>
-<p>To calculate this table it was assumed that the grist had an average laboratory extract of 80%, which corresponds to an extract potential of 37 pppg, and a wort absorption rate of 0.19 gal/l or 1.58 l/kg.
-</p><p>The <a rel="nofollow" class="external text" href="http://braukaiser.com/documents/efficiency_calculator.xls">Efficiency-Troubleshooting-Spreadsheet</a> can also be used to do this calculation.
-</p>
-<div style="clear:both;"></div>
-<h4><span class="mw-headline" id="Example_3">Example</span></h4>
-<pre>grist weight = 10 lb (Pilsner malt)
-amount of water added = 10 qt
-mash liquid SG = 1.006
-conversion efficiency = 95%
-
-The amount of water added corresponds to 1 qt/lb.
-For that amount and a mash liquid SG of 0.6 we find that 7% of the brewhouse efficiency were lost
-in the spent grain (i.e. 7% of the extract available in the grain were left in the spend grain as
-sugars dissolved in the wort).But only 95% of the grain extract were dissolved to begin with. This
-means that 95% - 7% = 88% must be the extract that made it into the boil kettle. Hence the lauter
-efficiency is the amount in the boil kettle (88%) divided by the amount that was dissolved at the
-start of the lauter (95%) which is a lauter efficiency of 92%.
-</pre>
-<h2><span class="mw-headline" id="Evaluating_Lauter_efficiency">Evaluating Lauter efficiency</span></h2>
-<p>If the lauter efficiency is much less than 90% for fly sparging, to many dissolved sugars were left in the spent grain. This is likely to be the result of channeling. Channeling is an effect where the sparge water doesn't rinse the grain bed evenly but finds paths of least resistance (channels). Causes of this can be a rushed run-off (the slower the better the sparge water will be able to rinse the sugars from the grains) or an inadequate manifold design. If the latter is the case, batch sparging may better be suited for the lauter tun.
-</p><p><br/>
-</p>
-<h1><span class="mw-headline" id="Example:_Making_sense_of_the_numbers">Example: Making sense of the numbers</span></h1>
-<p>Here is an example from one of my batches where I dissected the efficiency into the kettle based on the material that was presented above:
-</p><p>The grist was 4.3 kg 100% Pilsner malt for which I assume an extract potential of 80%. I used 17 l water in the mash. This means that 100% conversion efficiency would give me a first wort extract of
-</p>
-<dl><dd><b><tt>4.3 * 0.8 * 100 / (4.3 * 0.8 + 17) = 16.8 Plato</tt></b></dd></dl>
-<p>But I measured a first wort extract of  only 16 Plato. This means my conversion efficiency is:
-</p>
-<dl><dd><b><tt>16/16.8 * 100% = 95%</tt></b></dd></dl>
-<p>In other words, 5% of the starch in the grist didn’t get converted during the mash. Since the iodine test was negative, these 5% are still in the spent grain.
-</p><p>I then lautered the batch but wasn’t able to fit all the wort into the kettle. After I stopped running the wort into the kettle I ran it into a large measuring cup and found that I had 600 ml of wort in excess. This wort had an extract of 6 Plato. So it contained
-</p>
-<dl><dd><b><tt>0.6 * 0.97 * 1.024 * 0.06 = 0.04 kg</tt></b></dd></dl>
-<p>of extract. This is ~1&#160;% of the total extract that was available in the grain. This 1&#160;% is not able to contribute to the efficiency into the kettle. The *0.97 is to compensate for the expansion of the wort which was at about 70C.
-</p><p>I then gave the wort in the kettle a good stir and measured the volume and gravity. It came out to be 26 l at ~70C and 10.7 Plato. This means I got the following efficiency into the kettle:
-</p>
-<dl><dd><b><tt>100% * 26 * 0.97 * 1.043 * 0.107 / (4.3 * 0.8) = 82%</tt></b></dd></dl>
-<p>The factor 1.043 is the specific gravity of a wort with a sugar content of 10.7 Plato. Together with the wort volume it gives the weight of the wort which is needed since Plato is a measure of weight&#160;% sugar.
-</p><p>While the wort was heating and after I ran the grain bed dry (i.e. no more liquid was coming out of the mash tun) I closed the mash tun and added 8.6 l of cold water to the spent grain. This amounts to 2 l for each kg of initial grist. After stirring well and making sure that I also dislodged the clumps of spend grain from the bottom I tested the gravity of this water with a precision hydrometer and it was about 2.5 Plato. Looking at Table 2 (row for 2.5 Plato and column for 2 l/kg water added) this means that about 11% of the potential extract from the malt was left in the liquid that is held back by the spent grain.
-</p><p>Based on these numbers I know now what happened to the 100% potential extract from the grain:
-</p>
-<ul><li> 5% didn’t get converted. These 5% are still in the spent grain as unconverted starch. This is not too bad and may require more intensive mashing to get to. But most likely not worth the added effort.</li>
-<li> 1% didn’t fit into the boil kettle. This can easily be fixed by using 600ml less water next time</li>
-<li> 11% remained in the liquid that is held in the spent grain. This is a lot but the price that I pay for using batch sparging and avoiding over sparging. I may be able to drop this down to 8% ( gaining another 3&#160;%) by using 2 sparges instead of one of I really wanted to spend the additional time and effort.</li>
-<li> 82% ended up the boil kettle and this is the efficiency into the kettle.</li></ul>
-<p>This sums up to only 99% and I contribute the missing 1% to inaccuracies in the measurements.
-</p>
-<h1><span class="mw-headline" id="Sources">Sources</span></h1>
-<dl><dd>[BRIESS 2008] Briess average malt analysis data 2007/2008 <a rel="nofollow" class="external text" href="http://www.brewingwithbriess.com/Assets/PDFs/2007-2008%20Briess%20Product%20Flyer.pdf">PDF</a> </dd>
-<dd>[HUPPMANN] brosure for the Hupmann Lauterstar lauter tun design <a rel="nofollow" class="external text" href="http://www.gea-brewery.com/geabrewery/cmsresources.nsf/filenames/HUPP_Brosch_Lauterstar_12s_210x297_E.pdf/$file/HUPP_Brosch_Lauterstar_12s_210x297_E.pdf">PDF</a></dd>
-<dd>[WEYERMANN] Malzfabrik Weyermann malt specifications <a rel="nofollow" class="external text" href="http://www.weyermann.de/downloads/ger/Weyermann_Alle_Produkte.zip">ZIP</a></dd>
-<dd>[BEST MALZ] Best Malz <a rel="nofollow" class="external text" href="http://www.bestmalz.de/de/malz/malzqualitaeten.htm">Malzqualitaeten</a></dd>
-<dd>[Briggs, 2004] Dennis E. Briggs, Chris A. Boulton, Peter A. Brookes, Roger Stevens, <i>Brewing Science and Practice</i>, Published by Woodhead Publishing, 2004</dd></dl>
-</td></tr></table>
-
-<!--
-NewPP limit report
-CPU time usage: 0.207 seconds
-Real time usage: 1.171 seconds
-Preprocessor visited node count: 96/1000000
-Preprocessor generated node count: 102/1000000
-Post‐expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Highest expansion depth: 2/40
-Expensive parser function count: 0/100
--->
-
-<!-- Saved in parser cache with key braukais_mwiki1:pcache:idhash:1551-0!*!0!!en!5!* and timestamp 20220711073722 and revision id 4424
- -->
-</div>
-        </article>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>Originally published on <a href="http://braukaiser.com">braukaiser.com</a> by Kai Troester</p>
-            <p>Archived and preserved for the brewing community</p>
-        </div>
-    </footer>
-</body>
-</html>
+            </div>
+        </header>
+        <main class="main-content">
+            <article class="wiki-content">
+                <h1 class="page-title">Troubleshooting Brewhouse Efficiency</h1>
+                <table style="width:800px" border="0">
+                    <tr>
+                        <td>
+                        <p><a href="File:Header_efficiency.jpg.html"><img alt="Header efficiency.jpg" src="images/Header_efficiency.jpg" width="800" height="188"/></a>
+                        </p><p>Rather than listing all the factors that can affect the brewhouse efficiency, this article is intended to provide a systematic approach to identify and fix low efficiency related to mashing and lautering.
+                        </p>
+                        <nav class="toc"><h2>Contents</h2>
+                            <ul>
+                                <li><a href="#Determining_the_brewhouse_efficiency">Determining the brewhouse efficiency</a>
+                                <ul>
+                                    <li><a href="#Measuring_and_Measurement_Errors">Measuring and Measurement Errors</a></li>
+                                    <li><a href="#Measuring_Volumes">Measuring Volumes</a></li>
+                                    <li><a href="#Cooling_a_Hydrometer_Sample">Cooling a Hydrometer Sample</a></li>
+                                    <li><a href="#Check_the_hydrometer">Check the hydrometer</a></li>
+                                    <li><a href="#Calculating_Efficiency">Calculating Efficiency</a>
+                                    <ul>
+                                        <li><a href="#Weight_based_efficiency_calculation">Weight based efficiency calculation</a>
+                                        <ul>
+                                            <li><a href="#Dealing_with_kettle_additions_of_sugars_and.2For_extract">Dealing with kettle additions of sugars and/or extract</a></li>
+                                            <li><a href="#Example">Example</a></li>
+                                        </ul>
+                                        </li>
+                                        <li><a href="#Gravity_potential_based_efficiency_calculation">Gravity potential based efficiency calculation</a>
+                                        <ul>
+                                            <li><a href="#Dealing_with_Kettle_Additions_of_Sugars_and.2For_Extract_2">Dealing with Kettle Additions of Sugars and/or Extract</a></li>
+                                            <li><a href="#Example_2">Example</a></li>
+                                        </ul>
+                                        </li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                                </li>
+                                <li><a href="#How_good_is_my_efficiency.3F">How good is my efficiency?</a></li>
+                                <li><a href="#The_concept_of_conversion_and_lauter_efficiency">The concept of conversion and lauter efficiency</a></li>
+                                <li><a href="#Determining_Conversion_Efficiency">Determining Conversion Efficiency</a></li>
+                                <li><a href="#Evaluating_conversion_efficiency">Evaluating conversion efficiency</a></li>
+                                <li><a href="#Determining_Lauter_efficiency">Determining Lauter efficiency</a>
+                                <ul>
+                                    <li><a href="#Calculating_Lauter_efficiency_.28batch_sparging.29">Calculating Lauter efficiency (batch sparging)</a></li>
+                                    <li><a href="#Evaluating_the_batch_sparging_lauter_efficiency">Evaluating the batch sparging lauter efficiency</a></li>
+                                    <li><a href="#Testing_the_lauter_efficiency_.28fly_and_batch_sparging.29">Testing the lauter efficiency (fly and batch sparging)</a>
+                                    <ul>
+                                        <li><a href="#Example_3">Example</a></li>
+                                    </ul>
+                                    </li>
+                                    <li><a href="#Evaluating_Lauter_efficiency">Evaluating Lauter efficiency</a></li>
+                                </ul>
+                                </li>
+                                <li><a href="#Example:_Making_sense_of_the_numbers">Example: Making sense of the numbers</a></li>
+                                <li><a href="#Sources">Sources</a></li>
+                            </ul>
+                        </nav>
+                        <h1 id="Determining_the_brewhouse_efficiency">Determining the brewhouse efficiency</h1>
+                        <p>Before we can look for the causes of low efficiency we need to determine it. Since a number of different definitions exist, it is possible that the actual efficiency is in an acceptable range but was calculated based on a different efficiency formula which returned a lower result. Other error factors are incorrect gravity, volume or weight measurements.
+                        </p><p>In this analysis we will focus on the efficiency into the boil kettle. The efficiency doesn’t change during the boil as no extract is lost (except for the precipitation of a fraction of the proteins in the wort). Efficiency shortcomings after the boil (i.e. transfer to the fermenter) are obvious as they are proportional to the amount of wort that is lost. For a list of various efficiency definitions see the <a href="Understanding_Efficiency.html" title="Understanding Efficiency">Understanding Efficiency</a>.
+                        </p>
+                        <h2 id="Measuring_and_Measurement_Errors">Measuring and Measurement Errors</h2>
+                        <p>Before the efficiency can be calculated, 3 things need to be measured on brew day:
+                        </p>
+                        <ul><li> amount of grain used</li>
+                            <li> specific gravity or strength of the collected or finished wort</li>
+                            <li> volume of the collected or finished wort</li></ul>
+                            <p>It is important to be reasonably accurate when measuring these values. The more precise the measurements are, the more precise the calculated efficiency will be. As an example: If the grain weight has an error of 5% (which is +/- 200g for a 4.0kg grist or 0.5 lb for 10lb), the calculated efficiency will also have a 5% error, i.e. a calculated efficiency of 70% could actually be between 66% and 74%. The same applies to volume and gravity or strength measurements. (<i>Note: that a 5% error on 70% is +/- 3.5% since it is 5% of 70% and not 5% of 100%</i>)
+                            </p><p>The following measurement errors can be seen as reasonable:
+                            </p>
+                            <ul><li> 1% error for the grain weight. This means +/- 40g for a 4.00 kg grist or 0.1 lb for 10 lb</li>
+                                <li> 2% error for the specific gravity or wort strength. This means +/- 0.25 for 12 Plato or +/- 1 point for 1.050 SG </li>
+                                <li> 2% error on the volume measurement. This means +/- 0.5l on 25l or +/- 0.5 qt on 6 gal</li></ul>
+                                <p>With them the efficiency can be calculated with 5% accuracy.
+                                </p>
+                                <h2 id="Measuring_Volumes">Measuring Volumes</h2>
+                                <p>When measuring volumes on brew day, the temperature based expansion of water should be taken into account and all measured volumes should be corrected such that they represent the volume at room temperature. Since wort is mostly water, what is true for water is also true for wort. At 100 C or 212 F a given amount of water/wort has about 4% more volume than at room temperature. This means that 25 liters or quarts of wort at 100C/212F are actually 24 liters or quarts. This is a difference of 1 liter or quart and fairly significant for precise efficiency calculations. Because it results in more volume than actual, it results in a higher than actual calculated efficiency. To correct a volume measurement made at near boiling or boiling temperatures, multiply with 0.96.
+                                </p><p>At mash and lauter temperatures (~ 70C / 160F) the wort volume is only by about 3% larger than at room temperature. To correct the volume measurement, multiply with 0.97.
+                                </p><p>Also, take the time to calibrate or check your means of measuring the volume measurement in the boil kettle. Be it a dip-stick or markings on the kettle. To be off by 1 qt for a 6 gal is a 4% error in the calculated efficiency.
+                                </p>
+                                <h2 id="Cooling_a_Hydrometer_Sample">Cooling a Hydrometer Sample</h2>
+                                <p>Samples for taking hydrometer readings need to be cooled to either the hydrometers calibration temperature or at least a temperature at which it is safe to use a hydrometer. If the temperature of the sample is too hot, the glass of the hydrometer may not withstand the stress. If the sample temperature is not the calibration temperature of the hydrometer a conversion table can be used to correct the reading. Here is a [<a rel="nofollow" href="https://web.archive.org/web/20220711190909/http://www.braukaiser.com/documents/hydrometer_conversion_tables.pdf">PDF</a> that shows a number of conversion tables that can be used for converting between specific gravity and Plato and also for temperature correction.
+                                </p><p>The cooling of the sample needs to happen in a manner that does not allow for the excessive evaporation of water as that would increase the samples sugar content and specific gravity. I have noticed that chilling the sample in an open bowl can increase the gravity by as much as 4 points. As a result I always cool my samples in a small lid covered jar set in ice water.
+                                </p>
+                                <h2 id="Check_the_hydrometer">Check the hydrometer</h2>
+                                <p>If you have already checked the calibration of the hydrometer you can proceed to <a href="#Calculating_Efficiency">Calculating Efficiency</a>
+                                </p><p>To check the hydrometer use it in water at the calibration temperature that is noted on the scale. In water the hydrometer should read 1.000 or 0.0 Bailling/Brix/Plato. If another reference point is desired, dissolve 40g of table sugar in 160g of water. The resulting solution has a sugar content of 20 Plato or 1.083 SG. But such a 2 point calibration is generally not necessary for hydrometers.
+                                </p><p>If the hydrometer doesn't read 1.000 SG or 0.0 Plato in water, it doesn't have to be thrown out. Simply remember to always subtract the difference to 1.000 SG or 0.0 Plato from every hydrometer reading.
+                                </p><p>Examples:
+                                </p>
+                                <ul><li> If the hydrometer reads 1.002 in water, subtract 2 gravity points (i.e. 0.002) from every hydrometer reading</li>
+                                    <li> If the hydrometer reads 0.998 in water, add 2 gravity points to every hydrometer reading</li></ul>
+                                    <h2 id="Calculating_Efficiency">Calculating Efficiency</h2>
+                                    <p>To calculate efficiency two distinct approaches exist. The weight based approach calculates the weight of the extract that is present in the collected wort and puts it in relation to the total extract weight that was available in the grist. The gravity potential based approach puts the specific gravity that was achieved in relation to the maximum gravity potential that the grist has for the given wort volume. Both approaches are explained below and either one can be chosen.
+                                    </p><p>In addition to the two approaches shown here, the <a rel="nofollow" href="http://braukaiser.com/documents/efficiency_calculator.xls">Efficiency-Troubleshooting-Spreadsheet</a> can also be used to calculate the brewhouse efficiency.
+                                    </p>
+                                    <h3 id="Weight_based_efficiency_calculation">Weight based efficiency calculation</h3>
+                                    <p>The weight based efficiency calculation is best done with metric measurements. If your measurements are not yet metric, please convert them using these formulas
+                                    </p>
+                                    <ul><li> weight in kg = weight in lb * 0.45</li>
+                                        <li> volume in liter = volume in gal * 3.78 = volume in quart * 0.95</li>
+                                        <li> gravity in Plato = gravity points * 4 (this is simplified, but good enough for average specific gravities)</li></ul>
+                                        <p>To calculate the efficiency, we need to calculate the amount of extract that is present in the collected wort. Because this amount doesn't change during the boil, unless additional malt extract or sugar is added during the boil, it doesn't matter if it is calculated based on pre or post boil measurements. Just make sure that the volumes are corrected for temperature (see above):
+                                        </p>
+                                        <dl><dd><b><code>kettle extract weight in kg = volume in liter * specific gravity * gravity in Plato / 100 </code></b></dd></dl>
+                                        <p>Multiplying the volume with the specific gravity of the wort, which is basically the density of the wort, gives the weight of the wort. That is then multiplied by the wort strength expressed in Plato which expresses how much of that wort weight comes from extract (sugars, proteins, etc.).
+                                        </p><p>The other weight that is needed is the weight of the extract that can theoretically be extracted from the grist. When a maltster tests the malt quality one of the properties determined is the fine grind extract. It is determined by grinding the malt with a very tight mill gal (0.2 mm) mashing it with a step mash program called a Congress Mash. After that the non dissolved matter is separated from the wort. The amount of extract in that wort is then determined and expressed as percent of the original grain weight. Luckily for us, the amount of extract present in various grains (especially base malts) is fairly constant and we don't necessarily need to acquire an analysis sheet for all the malts that we used for our mash. Here is a table that lists commonly used types of malt and average fine grind extract percentages.
+                                        </p><p>Note, that the extract content is usually gives as percentage of the dry malt weight but that as it is stored and sold with a moisture content (MC) of 3-5%. This should be taken into account when determining the actual extract content in the malt. I.e. the dry basis extract percentage needs to be multiplied with (100% - MC)/100%.
+                                        </p>
+                                        <table border="1">
+                                            <tr>
+                                                <th> Malt type
+                                                </th>
+                                                <th> fine grind extract content
+                                                </th>
+                                                <th> corrected for ~ 4% moisture
+                                                </th></tr>
+                                                <tr>
+                                                    <td> 2-row brewers malt                   </td>
+                                                    <td>  80% </td>
+                                                    <td> 77%
+                                                    </td></tr>
+                                                    <tr>
+                                                        <td> 6-row brewers malt                   </td>
+                                                        <td>  78% </td>
+                                                        <td> 75%
+                                                        </td></tr>
+                                                        <tr>
+                                                            <td> Pilsner, Vienna, Munich              </td>
+                                                            <td>  80% [WEYERMANN, BEST MALZ] </td>
+                                                            <td> 77%
+                                                            </td></tr>
+                                                            <tr>
+                                                                <td> Pilsner Briess                       </td>
+                                                                <td>  80% </td>
+                                                                <td> 77%
+                                                                </td></tr>
+                                                                <tr>
+                                                                    <td> Munich malt Briess                   </td>
+                                                                    <td>  74-76% </td>
+                                                                    <td> 71–73%
+                                                                    </td></tr>
+                                                                    <tr>
+                                                                        <td> Specialty malts (crystal and roased) </td>
+                                                                        <td> 72 - 75&#160;% [BRIESS, WEYERMANN] </td>
+                                                                        <td> 69-72%
+                                                                        </td></tr>
+                                                                        <tr>
+                                                                            <td> Carafa                               </td>
+                                                                            <td>  65% [WEYERMANN] </td>
+                                                                            <td> 62%
+                                                                            </td></tr>
+                                                                            <tr>
+                                                                                <td> oat, barley, corn and wheat flakes   </td>
+                                                                                <td>  70% [BRIESS] </td>
+                                                                                <td> 67%
+                                                                                </td></tr>
+                                                                                <tr>
+                                                                                    <td> rice flakes                          </td>
+                                                                                    <td>  65% [BRIESS] </td>
+                                                                                    <td> 62%
+                                                                                    </td></tr></table>
+                                                                                    <p>The weight of extract in the grist is calculated as
+                                                                                    </p>
+                                                                                    <dl><dd><b><code>extract in grist in kg = weight of malt 1 in kg * extract content grain 1 in&#160;% / 100 + weight of malt 2 in kg * extract content grain 2 in&#160;% / 100 ... </code></b></dd></dl>
+                                                                                    <p>If only little (&lt;5%) specialty malts (crystal, roasted malts and Carfa)  were used, the formula can be simplified to
+                                                                                    </p>
+                                                                                    <dl><dd><b><code>extract in grist in kg = weight of grist in kg * 0.8</code></b></dd></dl>
+                                                                                    <p>The factor of 0.8 represents the average 80% extract content and is a good enough assumption for most base malts.
+                                                                                    </p><p>Now that the weight of the extract in the collected wort and the weight of the extract initially present in the grain are known we can calculate the brewhouse efficiency as
+                                                                                    </p>
+                                                                                    <dl><dd><b><code>brewhouse efficiency in&#160;% = 100% * kettle extract weight in kg / extract in grist in kg</code></b></dd></dl>
+                                                                                    <h4 id="Dealing_with_kettle_additions_of_sugars_and.2For_extract">Dealing with kettle additions of sugars and/or extract</h4>
+                                                                                    <p>Some recipes require the addition of sugars or additional extract in the brew kettle. These additions can distort the calculated brewhouse efficiency if that efficiency is based on post boil measurements. To compensate for that, simply subtract the weight of the added sugar/extract from the calculated kettle extract weight before calculating the brewhouse efficiency. In case of liquid malt extract, subtract only 80% of the extract weight that was added. Or work with gravity and volume measurements that were taken before the sugar/extract was added.
+                                                                                    </p>
+                                                                                    <h4 id="Example">Example</h4>
+                                                                                    <pre>grist weight: 4.5 kg Pilsner malt
+                                                                                    cold post boil volume: 21 liter
+                                                                                    post boil gravity: 1.048 / 12 Plato
+                                                                                    kettle extract weight = 21 l * 1.048 * 12 / 100 = 2.64 kg
+                                                                                    extract weight in grist = 4.5 kg * 80% / 100% = 3.6 kg
+                                                                                    brewhouse efficiency = 100% * 2.64 kg / 3.6 kg = 73&#160;%
+                                                                                    </pre>
+                                                                                    <p>Continue to <a href="#How_good_is_my_efficiency.3F">How good is my efficiency?</a> to see how this efficiency stacks up against commonly achieved brewhouse efficiencies.
+                                                                                    </p>
+                                                                                    <h3 id="Gravity_potential_based_efficiency_calculation">Gravity potential based efficiency calculation</h3>
+                                                                                    <p>This type of calculation is best done with US units. If the measurements are not already available as such, used the following formulas to convert the numbers:
+                                                                                    </p>
+                                                                                    <ul><li> volume in gallons = volume in liter / 3.78</li>
+                                                                                        <li> gravity in gravity points = extract in Plato * 4</li>
+                                                                                        <li> weight in lb = weight in kg / 0.45</li></ul>
+                                                                                        <p>This calculation takes a different approach. It determines how many gravity points (the digits after the 1. in the specific gravity value) could one get from the given grist and measured wort volume with 100% brewhouse efficiency. The actual brewhouse efficiency is then the actually achieved gravity points expressed as a percentage of that theoretical maximum. To calculate the theoretical maximum, we need to know the wort volume, the weight of the grist and the gravity potential (i.e. how many gravity points can be contributed) of that grist. The latter is expressed as points per pound and gallon (pppg) and can easily be derived from the extract percentage that is listed for malts. Pure table sugar is completely soluble and adding one pound of it to a volume of water that results in 1 gal of sugar solution will result in a solution with a specific gravity of 1.046. This means that sugar has a potential of 46 pppg. Malt and many adjuncts used in mashing are not completely soluble. Only their extractable weight (Fine grind extract corrected for malt moisture content) can me made soluble in mashing. To determine their gravity potential we simply multiply the gravity potential of sugar (46 pppg) with the extract percentage from the malt spec. This has been done in the following table
+                                                                                        </p><p><br/>
+                                                                                        </p>
+                                                                                        <table border="1">
+                                                                                            <tr>
+                                                                                                <th> Malt type
+                                                                                                </th>
+                                                                                                <th> fine grind extract potential
+                                                                                                </th>
+                                                                                                <th> corrected for ~4% moisture
+                                                                                                </th></tr>
+                                                                                                <tr>
+                                                                                                    <td> 2-row brewers malt                </td>
+                                                                                                    <td>   37 pppg </td>
+                                                                                                    <td> 36 pppg
+                                                                                                    </td></tr>
+                                                                                                    <tr>
+                                                                                                        <td> 6-row brewers malt                </td>
+                                                                                                        <td>  36 pppg </td>
+                                                                                                        <td> 35 pppg
+                                                                                                        </td></tr>
+                                                                                                        <tr>
+                                                                                                            <td> Pilsner, Vienna, Munich           </td>
+                                                                                                            <td>   37 pppg [WEYERMANN, BEST MALZ] </td>
+                                                                                                            <td> 36 pppg
+                                                                                                            </td></tr>
+                                                                                                            <tr>
+                                                                                                                <td> Pilsner Briess                    </td>
+                                                                                                                <td>  37 pppg </td>
+                                                                                                                <td> 36 pppg
+                                                                                                                </td></tr>
+                                                                                                                <tr>
+                                                                                                                    <td> Munich malt Briess                </td>
+                                                                                                                    <td>  34-35 pppg </td>
+                                                                                                                    <td> 33-34 pppg
+                                                                                                                    </td></tr>
+                                                                                                                    <tr>
+                                                                                                                        <td> Specialty malts (crystal and roased) </td>
+                                                                                                                        <td> 33 - 35 pppg [BRIESS, WEYERMANN] </td>
+                                                                                                                        <td> 32-34 pppg
+                                                                                                                        </td></tr>
+                                                                                                                        <tr>
+                                                                                                                            <td> Carafa                            </td>
+                                                                                                                            <td> 30 pppg [WEYERMANN] </td>
+                                                                                                                            <td> 29 pppg
+                                                                                                                            </td></tr>
+                                                                                                                            <tr>
+                                                                                                                                <td> oat, barley, corn and wheat flakes</td>
+                                                                                                                                <td> 32 pppg [BRIESS] </td>
+                                                                                                                                <td> 31 pppg
+                                                                                                                                </td></tr>
+                                                                                                                                <tr>
+                                                                                                                                    <td> rice flakes                       </td>
+                                                                                                                                    <td> 30 pppg [BRIESS] </td>
+                                                                                                                                    <td> 29 pppg
+                                                                                                                                    </td></tr></table>
+                                                                                                                                    <p>The theoretical maximum for the wort gravity is:
+                                                                                                                                    </p>
+                                                                                                                                    <dl><dd><b><code>maximum gravity points = (weight grain 1 in lb * potential grain 1 in pppg + weight grain 2 in lb * potential grain 2 in pppg ...) / volume in gal</code></b></dd></dl>
+                                                                                                                                    <p>If only a small amount of specialty grains were used, this simplified equation can be used
+                                                                                                                                    </p>
+                                                                                                                                    <dl><dd><b><code>maximum gravity points = weight of grist in lb * 37 pppg / volume in gal</code></b></dd></dl>
+                                                                                                                                    <p>To get the efficiency we put the actually measured gravity points in relation to the maximum gravity points
+                                                                                                                                    </p>
+                                                                                                                                    <dl><dd><b><code>brewhouse efficiency = 100% * actual gravity points / maximum gravity points</code></b></dd></dl>
+                                                                                                                                    <h4 id="Dealing_with_Kettle_Additions_of_Sugars_and.2For_Extract_2">Dealing with Kettle Additions of Sugars and/or Extract</h4>
+                                                                                                                                    <p>Some recipes require sugars or additional extract to be added in the brew kettle. These additions can distort the calculated brewhouse efficiency if that efficiency is based on post boil measurements. To compensate for that, simply subtract the gravity points gained from the added sugar/extract from the actual gravity points before calculating the brewhouse efficiency. For dry extract or sugar the gravity points to subtract can be calculated as:
+                                                                                                                                    </p>
+                                                                                                                                    <dl><dd><b><code>gravity points from dry kettle extracts = extract weight in lb * 46 pppg / kettle voulme in gal</code></b></dd></dl>
+                                                                                                                                    <p>In case of liquid extract use 37 pppg since liquid extract are 80% extract and 20% water. Or work with gravity and volume measurements that were taken before the sugar/extract was added.
+                                                                                                                                    </p>
+                                                                                                                                    <h4 id="Example_2">Example</h4>
+                                                                                                                                    <pre>grist weight = 10 lb (Pilsner malt)
+                                                                                                                                    cold post boil volume = 5.5 gal
+                                                                                                                                    post boil gravity = 1.048 (48 gravity points)
+                                                                                                                                    maximum gravity points from grist = 10 lb * 37 pppg / 5.5 gal = 67.3
+                                                                                                                                    brewhouse efficiency = 100% * 48 / 67.3 = 71&#160;%
+                                                                                                                                    </pre>
+                                                                                                                                    <h1 id="How_good_is_my_efficiency.3F">How good is my efficiency?</h1>
+                                                                                                                                    <p>Though a lot of opinions exist on what efficiency numbers are good and which ones are bad, let me try to give some guidelines in assessing the brewhouse efficiency. The following table lists a range of brewhouse efficiencies that can be expected from various brewing systems. Note that these are efficiencies measured in the boil kettle and not in the fermenter:
+                                                                                                                                    </p>
+                                                                                                                                    <table border="1">
+                                                                                                                                        <tr>
+                                                                                                                                            <th> brewing system
+                                                                                                                                            </th>
+                                                                                                                                            <th> typical brewhouse efficiency range
+                                                                                                                                            </th></tr>
+                                                                                                                                            <tr>
+                                                                                                                                                <td> Large scale commercial brewing                </td>
+                                                                                                                                                <td>   92 - 98&#160;% [HUPPMANN]
+                                                                                                                                                </td></tr>
+                                                                                                                                                <tr>
+                                                                                                                                                    <td> Fly sparging                </td>
+                                                                                                                                                    <td>  80 - 95%
+                                                                                                                                                    </td></tr>
+                                                                                                                                                    <tr>
+                                                                                                                                                        <td> Batch sparging           </td>
+                                                                                                                                                        <td>   75% - 90%
+                                                                                                                                                        </td></tr>
+                                                                                                                                                        <tr>
+                                                                                                                                                            <td> No sparge                    </td>
+                                                                                                                                                            <td>  65% - 80%
+                                                                                                                                                            </td></tr></table>
+                                                                                                                                                            <p>Another factor for the achievable efficiency, aside from the lauter method, is the amount of grain and the pre-boil volume. The larger the grist in relation to the batch size, the more wort gets trapped in that grist after running off. As a result larger beers generally show lower brewhouse efficiency. If more water is used for sparging, more of the extract can be washed out of the grain. The result is higher brewhouse efficiency but also a higher pre-boil volume which requires longer or more intensive boiling. That and the increased sparging can be detrimental to the beer quality and should not be used to fix an efficiency problem.
+                                                                                                                                                            </p><p>I would consider an efficiency (assuming a regular gravity beer: up to 1.060 / 16 Plato) that is below the ranges given above as problematic and worth investigating. Only when it is known where in the process the efficiency is lost a decision can be made about if and how the efficiency should be improved. While a low efficiency can be an indication of a suboptimal mashing and lautering process, Very high efficiency does not necessarily mean the best beer possible. The latter statement is targeted at over-sparging which can lead to the excessive extraction of unwanted grain compounds (in particular tannins from the husks).
+                                                                                                                                                            </p>
+                                                                                                                                                            <h1 id="The_concept_of_conversion_and_lauter_efficiency">The concept of conversion and lauter efficiency</h1>
+                                                                                                                                                            <p>There are 2 main processes that affect the brewhouse efficiency: mashing and lautering. Mashing is a mainly bio-chemical process during which the extractable portion of the grain is made soluble through enzymatic and physical processes. The result is sweet wort in which sugars, proteins and other compounds (the sum of all that is called extract) from the grain have been dissolved. During lautering, a physical process, this sweet wort and the extract contained in it is transferred to the boil kettle while the insoluble parts of the grain (husks, cell wall structure of the endosperm, coagulated protein, etc.) are left behind. Both processes are influenced by different factors and should be evaluated separately from each other. Because of that I want to introduce the following formula for brewhouse efficiency or efficiency into the kettle:
+                                                                                                                                                            </p>
+                                                                                                                                                            <dl><dd><b><code>brewhouse efficiency = conversion efficiency * lauter efficiency</code></b></dd></dl>
+                                                                                                                                                            <p>The subsequent sections will measure and evaluate the conversion and lauter efficiency separate from each other which gives shows where in the process efficiency is lost and which process step actually needs attention.
+                                                                                                                                                            </p>
+                                                                                                                                                            <h1 id="Determining_Conversion_Efficiency">Determining Conversion Efficiency</h1>
+                                                                                                                                                            <figure><a href="File:First_wort_gravity.gif.html"><img alt="" src="images/First_wort_gravity.gif" width="300" height="517"/></a>  <figcaption>Table 1 - Extract content or gravity of the first wort based on the mash thickness. 100% mash efficiency, 80% fine grind extract and 4% moisture content of the malt were assumed for the grist</figcaption></figure>
+                                                                                                                                                                <p>To determine the conversion efficiency we simply need to measure the gravity (i.e. extract content) of the mash liquid once the mash is complete. Based on the amount of mash liquid that was used and the amount of extract that was potentially extractable from the grain, we can determine what the extract concentration in the mash should be for 100% conversion efficiency. Use the following formula or the table to the right to calculate the first wort extract content or specific gravity that would be achieved with 100% conversion efficiency
+                                                                                                                                                                </p><p><a href="File:Formula_FW_max.gif.html"><img alt="Formula FW max.gif" src="images/Formula_FW_max.gif" width="341" height="49"/></a>
+                                                                                                                                                                </p><p>Calculating the specific gravity of the first wort based on the gravity potential of the grist is more complicated since the volume to be used in that equation is not the volume of the water used but the volume of the resulting wort which is larger due to the dissolved extract and more difficult to measure. The easiest way is to calculate the water grist ratio and use the table to the right.
+                                                                                                                                                                </p><p>The conversion efficiency can be estimated with this simple formula. See <a href="Understanding_Efficiency.html#Measuring_conversion_efficiency" title="Understanding Efficiency">Measuring_conversion_efficiency</a> for a more accurate formula.
+                                                                                                                                                                </p><p><a href="File:Formula_CE_simple.gif.html"><img alt="Formula CE simple.gif" src="images/Formula_CE_simple.gif" width="218" height="52"/></a>
+                                                                                                                                                                </p><p>or
+                                                                                                                                                                </p><p><a href="File:Formula_CE_simple_from_sg.gif.html"><img alt="Formula CE simple from sg.gif" src="images/Formula_CE_simple_from_sg.gif" width="225" height="48"/></a>
+                                                                                                                                                                </p><p>The <a rel="nofollow" href="http://braukaiser.com/documents/efficiency_calculator.xls">Efficiency-Troubleshooting-Spreadsheet</a> can also be used to calculate the conversion efficiency from the grist weight, water used and first wort extract/gravity.
+                                                                                                                                                                </p><p>When measuring the first wort gravity or strength make sure you get a sample after recirculating the wort through the grain in order to prevent measuring wort that was simply trapped under the false bottom or in the manifold. If cooling of the sample is necessary it should be done in a way that minimizes evaporation.
+                                                                                                                                                                </p><p>The conversion efficiency should be close to 100% as this would be an indication that all mash parameters (crush, temperature, pH, time, diastatic power, water/grist ratio, mash schedule) were in the correct range for full conversion. Weather or not they were in the correct range for other worth parameters (e.g. fermentability) cannot be determined at this point. If the conversion efficiency is satisfactory proceed to <a href="#Determining_Lauter_efficiency">Determining Lauter efficiency</a>, otherwise read on to learn about parameters that affect the conversion efficiency.
+                                                                                                                                                                </p>
+                                                                                                                                                                <h1 id="Evaluating_conversion_efficiency">Evaluating conversion efficiency</h1>
+                                                                                                                                                                <p>If the conversion efficiency is less than 90-95%, test the wort and spent grain for starch with iodine. Wort is best tested for starch on a piece of chalk or drywall (<a href="Starch_Test.html" title="Starch Test">Starch Test</a>) and to test the spent grain pick up a few pieces, rub them between two fingers and add a drop of iodine solution. If they turn black-purple, they still contain starch (wash hands afterwards). If there is indeed starch in the spent grain and the conversion efficiency is especially poor (&lt;80%), it is oftentimes the case that you can see dry starch in the middle of larger grits. That unconverted starch is the cause of the low conversion efficiency and can have multiple causes:
+                                                                                                                                                                </p>
+                                                                                                                                                                <ul><li> <b>crush:</b> If the crush is too coarse the pieces of endosperm will be too large for the gelatinization and enzymes to convert them at the chosen saccharification temperature and time. Evaluate the crush. Are there any uncrushed kernels? Are there any kernels that are cracked, but the endosperm doesn't come out easily? But keep in mind, that there is a limit in how much a tighter crush can improve conversion efficiency (especially if other mash parameters are off as well) and that it can be overdone. From my experience I suggest a crush done with a mill gap spacing between 0.5 and 0.8 mm (20 - 32 mil).</li></ul>
+                                                                                                                                                                <ul><li> <b>temperature:</b> While any temperature below the upper temperature limit for the amylase enzymes (about 80C/175F) can lead to full conversion, only temperatures between ~63C/145F and 80C/175F are known to fully convert a mash with practical saccharification rest time. The exact temperature that should be chosen for the saccharification rest depends on the mash schedule, rest time, attenuation target and diastatic power of the malt. Check your thermometer against another one or at least against ice water (0C/32F) and boiling water (100C/212F; if you are close to see level).</li></ul>
+                                                                                                                                                                <ul><li> <b>pH:</b> the enzymes, that are responsible for starch conversion, are not only sensitive to temperature but they are also sensitive to pH. The brewing literature and small scale mashing experiments (<a href="Limit_of_attenuation_experiment.html" title="Limit of attenuation experiment">Limit of attenuation experiment</a>) show that the mash pH should be between 5.3 and 5.7 (measured at room temperature) for optimal conversion efficiency. The mash pH is determined by the water/mash's mineral content and the gist composition. Check your waters residual alkalinity (RA) with John Palmer's <a rel="nofollow" href="http://howtobrew.com/section3/Palmers_Mash_RA_ver2c.xls">residual alkalinity spreadsheet</a> or, even better, check the mash pH. You won't need to buy a pH meter for this, using precision test strips like EMD's colorpHast strips are good enough.</li></ul>
+                                                                                                                                                                <ul><li> <b>diastatic power:</b> this can be a problem with grists containing large amounts of highly kilned malts (e.g. dark Munich malt) or unmalted grains. Highly kilned malts contain fewer enzymes because the kilning process damaged more of them and the use of unmalted grains (e.g. rice or corn) dilutes the enzymatic power of the mash because they only add, if any, a small amount of enzymes to the mash. If the amount of enzymes in the mash is low, the mash may not be able to convert itself or the acceptable ranges for the other mash parameter got much smaller. A mash with low enzyme content may just need more time or a different mash schedule (step mash v.s. Single infusion mash) to be able to fully convert. If this is suspected to be the culprit, choose a different mash schedule or replace some of the enzymatic weaker malts with enzymatic stronger (e.g. Pale or Pilsner) malt.</li></ul>
+                                                                                                                                                                <ul><li> <b>time:</b> the longer the mash rests while the enzymes are still active, the more of the starch can be converted. Once all starch has been converted time will not have an effect on the conversion efficiency anymore. But it may still have an effect on other wort properties like fermentability for example which is why we don't just stop mashing once the mash is converted. When mashing at lower temperatures or with enzymatic weak grists extending the saccharification rest length from 60min to 90min or longer may just do the trick for getting to complete conversion and satisfactory conversion efficiency.</li></ul>
+                                                                                                                                                                <ul><li> <b>water/grist ratio:</b> the gelatinization and enzymatic activity require free water and in order to be fully completed, enough water needs to be available. This sets the lower limit of water/grist ratio for mashing. According to Briggs this lower limit is around 2 l/kg or 1 qt/lb [Briggs, 2004]. If too much water exists in the mash the enzymes may be to spread out to efficiently work on the starch. But that only happens at very thin mashes. It has been reported that even mashes as thin as 6 l/kg or 3 qts/lb work well. Based on this, it is unlikely that a mash was too thin for conversion.</li></ul>
+                                                                                                                                                                <ul><li> <b>mash schedule:</b> Enzymatic weak mashes, mashes with undermodified malts (which are hard to find these days) or adjunct mashes may not fully convert when using the simple single infusion mash schedule. For such mashes it may be necessary to boil some of the grains/malt (decoction or cereal mashes) or use different saccharification rest temperatures. For enzymatic weak mashes it may be beneficial to add a dextrinization rest between 70C/158F and 75C/166F to speed up the alpha amylase and get the last bit of starch converted. But note that if there is a significant efficiency gain through this higher temperature rest it will be in the form of mostly unfermentable extract and thus raise the fermentability of the wort. This may need to be accounted for by using a lower temp saccharification rest.</li></ul>
+                                                                                                                                                                <ul><li> <b>dough balls:</b> those can happen when the starch around a ball of malt gelatinizes and prevents water from reaching the malt inside that dough ball. If enzymatic activity is strong enough the gelatinized starch that is covering the ball will be converted and dissolved and eventually make way for the water to reach the dry malt inside. If that is not happening it causes conversion efficiency losses and even if the starch inside the dough balls is eventually freed, it may happen too late for full conversion of this starch. To avoid this problem make sure the mash is well stirred at dough-in. I also found that if the strike water temperature is above 60-65C (140-150F) adding grain to water reduces dough balls. At temperatures below this range barley starch doesn't gelatinize yet and dough balls are not likely to form.</li></ul>
+                                                                                                                                                                <h1 id="Determining_Lauter_efficiency">Determining Lauter efficiency</h1>
+                                                                                                                                                                <p>There 2 ways to determine the Lauter efficiency. If batch sparging is used, it can be estimated from the total amount of water that was used and the total volume of wort that was collected. For fly and batch sparging it can also be estimated from measuring the extract that is still left in the grains after sparging.
+                                                                                                                                                                </p>
+                                                                                                                                                                <h2 id="Calculating_Lauter_efficiency_.28batch_sparging.29">Calculating Lauter efficiency (batch sparging)</h2>
+                                                                                                                                                                <p>The concept of calculating the lauter efficiency for batch sparging has been demonstrated in <a href="Batch_Sparging_Analysis.html" title="Batch Sparging Analysis">Batch Sparging Analysis</a>. As this is a rather involved an cumbersome process I suggest taking accurate measurements of:
+                                                                                                                                                                </p>
+                                                                                                                                                                <ul><li> grain weight and extract content of that grain (see above)</li>
+                                                                                                                                                                    <li> total water volume used for mashing and sparging measured at room temperature. This does not include water added to compensate for decoction boil-off if applicable.</li>
+                                                                                                                                                                    <li> the total volume of wort collected and the temperature at which it was measured.</li>
+                                                                                                                                                                    <li> the extract content (Plato) or specific gravity of the wort that was collected. Make sure the wort is well mixed to prevent wort stratification.</li>
+                                                                                                                                                                    <li> If even higher precision for the calculation is desired you can also note the collected wort volumes and temperatures after each run-off. If that is not done, equal run-off sizes will be assumed.</li></ul>
+                                                                                                                                                                    <p>And then using the <a rel="nofollow" href="http://braukaiser.com/documents/batch_sparging_efficiency_analysis.xls">Batch-Sparging-Efficiency-Spreadsheet</a> spreadsheet to calculate the theoretical lauter efficiency.
+                                                                                                                                                                    </p>
+                                                                                                                                                                    <h2 id="Evaluating_the_batch_sparging_lauter_efficiency">Evaluating the batch sparging lauter efficiency</h2>
+                                                                                                                                                                    <p>If the theoretical lauter efficiency isn't close to the lauter efficiency determined from the conversion efficiency and brewhouse efficiency, the batch sparging process was suboptimal. Have a look at the following:
+                                                                                                                                                                    </p>
+                                                                                                                                                                    <ul><li> Was the mash thoroughly stirred after the addition of grain? It is easily possible for a tick portion of the mash to remain undisturbed at the bottom or in corners of the mash/lauter tun.</li>
+                                                                                                                                                                        <li> Where the measurements done correctly or did you forget about water additions or wort that was collected but not added to the brew kettle?</li>
+                                                                                                                                                                        <li> Did the mash drain completely before new sparge water was added? Though that is not necessary for batch sparging, it was assumed for the calculation of the batch sparge lauter efficiency.</li></ul>
+                                                                                                                                                                        <p>Run-off speed and rest time after stirring the mash don't have any impact on the lauter efficiency in batch sparging.
+                                                                                                                                                                        </p>
+                                                                                                                                                                        <h2 id="Testing_the_lauter_efficiency_.28fly_and_batch_sparging.29">Testing the lauter efficiency (fly and batch sparging)</h2>
+                                                                                                                                                                        <p>To some extend, the lauter efficiency can also be measured. This measurement tries to estimate the amount of extract left in the grain by diluting it with a known amount of water and measuring the extract/gravity of the resulting wort. Based on that the percentage of extract that remained in the lautertun can be estimated. While a more detailed formula can be found in [Understanding Efficiency] (not yet available), a simple table is used here.
+                                                                                                                                                                        </p>
+                                                                                                                                                                        <figure><a href="File:Table_for_estimating_lauter_loss.gif.html"><img alt="" src="images/Table_for_estimating_lauter_loss.gif" width="579" height="534"/></a>  <figcaption>Table 2 - Estimating the brewhouse efficiency loss in the lauter</figcaption></figure>
+                                                                                                                                                                            <p>To use that table to estimate use the following procedure:
+                                                                                                                                                                            </p>
+                                                                                                                                                                            <ul><li> add 0.5, 1.0, 1.5 or 2.0 quart of water per pound of initial grist weight. This water doesn't have to be hot. Cold tap water works just fine. You are not going to make beer from this. This is just for testing purposes. Make sure the mash is thin enough to be stirred very well. For metric measurements add 1 or 2 l/kg grist weight</li>
+                                                                                                                                                                                <li> stir the mash well and make sure you get the mash stuck in corners and at the bottom of the lautertun</li>
+                                                                                                                                                                                <li> take a hydrometer (or refractometer) reading of the mash liquid</li>
+                                                                                                                                                                                <li> correct that reading for temperature and look it up in the table. The number in the column corresponding to the amount of water that was added shows the brewhouse efficiency percentage points that were lost in lauter tun. Subtract that from the conversion efficiency and divide the result by the conversion efficiency to find the lauter efficiency.</li></ul>
+                                                                                                                                                                                <p>To calculate this table it was assumed that the grist had an average laboratory extract of 80%, which corresponds to an extract potential of 37 pppg, and a wort absorption rate of 0.19 gal/l or 1.58 l/kg.
+                                                                                                                                                                                </p><p>The <a rel="nofollow" href="http://braukaiser.com/documents/efficiency_calculator.xls">Efficiency-Troubleshooting-Spreadsheet</a> can also be used to do this calculation.
+                                                                                                                                                                                </p>
+                                                                                                                                                                                <div style="clear:both;"></div>
+                                                                                                                                                                                <h4 id="Example_3">Example</h4>
+                                                                                                                                                                                <pre>grist weight = 10 lb (Pilsner malt)
+                                                                                                                                                                                amount of water added = 10 qt
+                                                                                                                                                                                mash liquid SG = 1.006
+                                                                                                                                                                                conversion efficiency = 95%
+                                                                                                                                                                                The amount of water added corresponds to 1 qt/lb.
+                                                                                                                                                                                For that amount and a mash liquid SG of 0.6 we find that 7% of the brewhouse efficiency were lost
+                                                                                                                                                                                in the spent grain (i.e. 7% of the extract available in the grain were left in the spend grain as
+                                                                                                                                                                                sugars dissolved in the wort).But only 95% of the grain extract were dissolved to begin with. This
+                                                                                                                                                                                means that 95% - 7% = 88% must be the extract that made it into the boil kettle. Hence the lauter
+                                                                                                                                                                                efficiency is the amount in the boil kettle (88%) divided by the amount that was dissolved at the
+                                                                                                                                                                                start of the lauter (95%) which is a lauter efficiency of 92%.
+                                                                                                                                                                                </pre>
+                                                                                                                                                                                <h2 id="Evaluating_Lauter_efficiency">Evaluating Lauter efficiency</h2>
+                                                                                                                                                                                <p>If the lauter efficiency is much less than 90% for fly sparging, to many dissolved sugars were left in the spent grain. This is likely to be the result of channeling. Channeling is an effect where the sparge water doesn't rinse the grain bed evenly but finds paths of least resistance (channels). Causes of this can be a rushed run-off (the slower the better the sparge water will be able to rinse the sugars from the grains) or an inadequate manifold design. If the latter is the case, batch sparging may better be suited for the lauter tun.
+                                                                                                                                                                                </p><p><br/>
+                                                                                                                                                                                </p>
+                                                                                                                                                                                <h1 id="Example:_Making_sense_of_the_numbers">Example: Making sense of the numbers</h1>
+                                                                                                                                                                                <p>Here is an example from one of my batches where I dissected the efficiency into the kettle based on the material that was presented above:
+                                                                                                                                                                                </p><p>The grist was 4.3 kg 100% Pilsner malt for which I assume an extract potential of 80%. I used 17 l water in the mash. This means that 100% conversion efficiency would give me a first wort extract of
+                                                                                                                                                                                </p>
+                                                                                                                                                                                <dl><dd><b><code>4.3 * 0.8 * 100 / (4.3 * 0.8 + 17) = 16.8 Plato</code></b></dd></dl>
+                                                                                                                                                                                <p>But I measured a first wort extract of  only 16 Plato. This means my conversion efficiency is:
+                                                                                                                                                                                </p>
+                                                                                                                                                                                <dl><dd><b><code>16/16.8 * 100% = 95%</code></b></dd></dl>
+                                                                                                                                                                                <p>In other words, 5% of the starch in the grist didn’t get converted during the mash. Since the iodine test was negative, these 5% are still in the spent grain.
+                                                                                                                                                                                </p><p>I then lautered the batch but wasn’t able to fit all the wort into the kettle. After I stopped running the wort into the kettle I ran it into a large measuring cup and found that I had 600 ml of wort in excess. This wort had an extract of 6 Plato. So it contained
+                                                                                                                                                                                </p>
+                                                                                                                                                                                <dl><dd><b><code>0.6 * 0.97 * 1.024 * 0.06 = 0.04 kg</code></b></dd></dl>
+                                                                                                                                                                                <p>of extract. This is ~1&#160;% of the total extract that was available in the grain. This 1&#160;% is not able to contribute to the efficiency into the kettle. The *0.97 is to compensate for the expansion of the wort which was at about 70C.
+                                                                                                                                                                                </p><p>I then gave the wort in the kettle a good stir and measured the volume and gravity. It came out to be 26 l at ~70C and 10.7 Plato. This means I got the following efficiency into the kettle:
+                                                                                                                                                                                </p>
+                                                                                                                                                                                <dl><dd><b><code>100% * 26 * 0.97 * 1.043 * 0.107 / (4.3 * 0.8) = 82%</code></b></dd></dl>
+                                                                                                                                                                                <p>The factor 1.043 is the specific gravity of a wort with a sugar content of 10.7 Plato. Together with the wort volume it gives the weight of the wort which is needed since Plato is a measure of weight&#160;% sugar.
+                                                                                                                                                                                </p><p>While the wort was heating and after I ran the grain bed dry (i.e. no more liquid was coming out of the mash tun) I closed the mash tun and added 8.6 l of cold water to the spent grain. This amounts to 2 l for each kg of initial grist. After stirring well and making sure that I also dislodged the clumps of spend grain from the bottom I tested the gravity of this water with a precision hydrometer and it was about 2.5 Plato. Looking at Table 2 (row for 2.5 Plato and column for 2 l/kg water added) this means that about 11% of the potential extract from the malt was left in the liquid that is held back by the spent grain.
+                                                                                                                                                                                </p><p>Based on these numbers I know now what happened to the 100% potential extract from the grain:
+                                                                                                                                                                                </p>
+                                                                                                                                                                                <ul><li> 5% didn’t get converted. These 5% are still in the spent grain as unconverted starch. This is not too bad and may require more intensive mashing to get to. But most likely not worth the added effort.</li>
+                                                                                                                                                                                    <li> 1% didn’t fit into the boil kettle. This can easily be fixed by using 600ml less water next time</li>
+                                                                                                                                                                                    <li> 11% remained in the liquid that is held in the spent grain. This is a lot but the price that I pay for using batch sparging and avoiding over sparging. I may be able to drop this down to 8% ( gaining another 3&#160;%) by using 2 sparges instead of one of I really wanted to spend the additional time and effort.</li>
+                                                                                                                                                                                    <li> 82% ended up the boil kettle and this is the efficiency into the kettle.</li></ul>
+                                                                                                                                                                                    <p>This sums up to only 99% and I contribute the missing 1% to inaccuracies in the measurements.
+                                                                                                                                                                                    </p>
+                                                                                                                                                                                    <h1 id="Sources">Sources</h1>
+                                                                                                                                                                                    <dl><dd>[BRIESS 2008] Briess average malt analysis data 2007/2008 <a rel="nofollow" href="http://www.brewingwithbriess.com/Assets/PDFs/2007-2008%20Briess%20Product%20Flyer.pdf">PDF</a> </dd>
+                                                                                                                                                                                        <dd>[HUPPMANN] brosure for the Hupmann Lauterstar lauter tun design <a rel="nofollow" href="http://www.gea-brewery.com/geabrewery/cmsresources.nsf/filenames/HUPP_Brosch_Lauterstar_12s_210x297_E.pdf/$file/HUPP_Brosch_Lauterstar_12s_210x297_E.pdf">PDF</a></dd>
+                                                                                                                                                                                        <dd>[WEYERMANN] Malzfabrik Weyermann malt specifications <a rel="nofollow" href="http://www.weyermann.de/downloads/ger/Weyermann_Alle_Produkte.zip">ZIP</a></dd>
+                                                                                                                                                                                        <dd>[BEST MALZ] Best Malz <a rel="nofollow" href="http://www.bestmalz.de/de/malz/malzqualitaeten.htm">Malzqualitaeten</a></dd>
+                                                                                                                                                                                        <dd>[Briggs, 2004] Dennis E. Briggs, Chris A. Boulton, Peter A. Brookes, Roger Stevens, <i>Brewing Science and Practice</i>, Published by Woodhead Publishing, 2004</dd></dl>
+                                                                                                                                                                                        </td></tr></table>
+                                                                                                                                                                                        <!--
+                                                                                                                                                                                        NewPP limit report
+                                                                                                                                                                                        CPU time usage: 0.207 seconds
+                                                                                                                                                                                        Real time usage: 1.171 seconds
+                                                                                                                                                                                        Preprocessor visited node count: 96/1000000
+                                                                                                                                                                                        Preprocessor generated node count: 102/1000000
+                                                                                                                                                                                        Post‐expand include size: 0/2097152 bytes
+                                                                                                                                                                                        Template argument size: 0/2097152 bytes
+                                                                                                                                                                                        Highest expansion depth: 2/40
+                                                                                                                                                                                        Expensive parser function count: 0/100
+                                                                                                                                                                                        -->
+                                                                                                                                                                                        <!-- Saved in parser cache with key braukais_mwiki1:pcache:idhash:1551-0!*!0!!en!5!* and timestamp 20220711073722 and revision id 4424
+                                                                                                                                                                                        -->
+                                                                                                                                                                                        
+                                                                                                                                                                                    </article>
+                                                                                                                                                                                </main>
+                                                                                                                                                                                <footer class="site-footer">
+                                                                                                                                                                                    <div class="footer-content">
+                                                                                                                                                                                    <p>Originally published on <a href="http://braukaiser.com">braukaiser.com</a> by Kai Troester</p>
+                                                                                                                                                                                    <p>Archived and preserved for the brewing community</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </footer>
+                                                                                                                                                                            </body>
+                                                                                                                                                                        </html>

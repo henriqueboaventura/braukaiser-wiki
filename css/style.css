@@ -181,64 +181,34 @@ img {
     border-radius: 4px;
 }
 
-.thumb {
-    margin: 1rem 0;
+/* Figures */
+figure {
+    margin: 1.5rem 0;
     display: block;
-}
-
-.thumbinner {
     border: 1px solid #ddd;
-    padding: 5px;
+    padding: 8px;
     background: #f9f9f9;
     border-radius: 4px;
     display: inline-block;
     max-width: 100%;
 }
 
-.thumbimage {
+figure img {
     display: block;
+    border-radius: 2px;
 }
 
-.thumbcaption {
+figcaption {
     font-size: 0.9rem;
     color: #666;
-    padding: 0.5rem;
+    padding: 0.5rem 0 0 0;
     font-style: italic;
     text-align: left;
     max-width: 100%;
 }
 
-.tright {
-    float: none;
-    margin: 1rem 0;
-    clear: both;
-}
-
-.tleft {
-    float: none;
-    margin: 1rem 0;
-    clear: both;
-}
-
-.tnone, .center {
-    text-align: left;
-    margin: 1.5rem 0;
-    clear: both;
-}
-
-/* Figure galleries - when multiple figures appear together */
-.content-block .thumb {
-    display: block;
-    margin: 1rem 0;
-}
-
-.floatnone {
-    display: block;
-    margin: 1rem 0;
-}
-
-/* TOC */
-#toc, .toc {
+/* TOC - Table of Contents */
+nav.toc {
     background: #f9f9f9;
     border: 1px solid #ddd;
     padding: 1rem 1.5rem;
@@ -248,24 +218,24 @@ img {
     min-width: 200px;
 }
 
-#toc h2, .toc h2 {
+nav.toc h2 {
     font-size: 1.1rem;
     margin: 0 0 0.5rem 0;
     border: none;
     padding: 0;
 }
 
-#toc ul, .toc ul {
+nav.toc ul {
     margin: 0;
     padding-left: 1.5rem;
     list-style: none;
 }
 
-#toc li, .toc li {
+nav.toc li {
     margin: 0.3rem 0;
 }
 
-#toc a, .toc a {
+nav.toc a {
     color: var(--link-color);
 }
 
@@ -284,8 +254,8 @@ dd {
     margin-bottom: 0.5rem;
 }
 
-/* Code and pre */
-code, pre {
+/* Code */
+code {
     font-family: 'Courier New', monospace;
     background: #f4f4f4;
     padding: 0.2rem 0.4rem;
@@ -293,7 +263,10 @@ code, pre {
 }
 
 pre {
+    font-family: 'Courier New', monospace;
+    background: #f4f4f4;
     padding: 1rem;
+    border-radius: 3px;
     overflow-x: auto;
     margin: 1rem 0;
 }
@@ -305,18 +278,6 @@ blockquote {
     padding: 1rem 1.5rem;
     background: #f9f9f9;
     font-style: italic;
-}
-
-/* Content sections */
-.content-section {
-    margin-bottom: 2rem;
-    clear: both;
-}
-
-.content-section::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 /* Footer */
@@ -352,14 +313,9 @@ blockquote {
         padding: 1.5rem;
     }
 
-    .tright, .tleft {
-        float: none;
-        margin: 1rem auto;
+    figure {
         display: block;
-    }
-
-    .thumbinner {
-        max-width: 100% !important;
+        margin: 1rem auto;
     }
 }
 
@@ -371,48 +327,12 @@ blockquote {
 }
 
 /* Index page specific */
-.index-section {
-    margin-bottom: 2rem;
+.index-content h1 {
+    margin-top: 2rem;
 }
 
-.index-section h2 {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.3rem;
-}
-
-.index-section ul {
-    list-style-type: disc;
-}
-
-.index-section ul ul {
-    list-style-type: circle;
-}
-
-.index-section ul ul ul {
-    list-style-type: square;
-}
-
-/* Content blocks (converted from table layout) */
-.content-block {
-    margin-bottom: 1.5rem;
-    clear: both;
-}
-
-.content-block::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.content-block p:first-child {
+.index-content h1:first-child {
     margin-top: 0;
-}
-
-/* Ensure images in content don't overflow */
-.content-block img {
-    max-width: 100%;
-    height: auto;
 }
 
 /* Print styles */
