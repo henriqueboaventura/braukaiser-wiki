@@ -1,0 +1,428 @@
+/* Braukaiser - Modern CSS */
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #D2691E;
+    --accent-color: #DAA520;
+    --bg-color: #FDF5E6;
+    --text-color: #333;
+    --header-bg: #2C1810;
+    --link-color: #8B4513;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.site-header {
+    background: var(--header-bg);
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-title {
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-title h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.site-title .tagline {
+    font-size: 0.9rem;
+    color: #ccc;
+    font-style: italic;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: var(--accent-color);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+}
+
+.wiki-content {
+    background: #fff;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.page-title {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 1rem 0;
+    line-height: 1.3;
+    text-align: left;
+}
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.1rem; }
+
+p {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+/* Lists */
+ul, ol {
+    margin: 1rem 0 1rem 2rem;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.thumb {
+    margin: 1rem 0;
+    display: block;
+}
+
+.thumbinner {
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.thumbimage {
+    display: block;
+}
+
+.thumbcaption {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0.5rem;
+    font-style: italic;
+    text-align: left;
+    max-width: 100%;
+}
+
+.tright {
+    float: none;
+    margin: 1rem 0;
+    clear: both;
+}
+
+.tleft {
+    float: none;
+    margin: 1rem 0;
+    clear: both;
+}
+
+.tnone, .center {
+    text-align: left;
+    margin: 1.5rem 0;
+    clear: both;
+}
+
+/* Figure galleries - when multiple figures appear together */
+.content-block .thumb {
+    display: block;
+    margin: 1rem 0;
+}
+
+.floatnone {
+    display: block;
+    margin: 1rem 0;
+}
+
+/* TOC */
+#toc, .toc {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+    display: inline-block;
+    min-width: 200px;
+}
+
+#toc h2, .toc h2 {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    border: none;
+    padding: 0;
+}
+
+#toc ul, .toc ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+#toc li, .toc li {
+    margin: 0.3rem 0;
+}
+
+#toc a, .toc a {
+    color: var(--link-color);
+}
+
+/* Definition lists */
+dl {
+    margin: 1rem 0;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+dd {
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Code and pre */
+code, pre {
+    font-family: 'Courier New', monospace;
+    background: #f4f4f4;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+pre {
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--accent-color);
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    background: #f9f9f9;
+    font-style: italic;
+}
+
+/* Content sections */
+.content-section {
+    margin-bottom: 2rem;
+    clear: both;
+}
+
+.content-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.site-footer {
+    background: var(--header-bg);
+    color: #ccc;
+    padding: 2rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.site-footer a {
+    color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav {
+        justify-content: center;
+    }
+
+    .wiki-content {
+        padding: 1.5rem;
+    }
+
+    .tright, .tleft {
+        float: none;
+        margin: 1rem auto;
+        display: block;
+    }
+
+    .thumbinner {
+        max-width: 100% !important;
+    }
+}
+
+/* Utility classes */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Index page specific */
+.index-section {
+    margin-bottom: 2rem;
+}
+
+.index-section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.3rem;
+}
+
+.index-section ul {
+    list-style-type: disc;
+}
+
+.index-section ul ul {
+    list-style-type: circle;
+}
+
+.index-section ul ul ul {
+    list-style-type: square;
+}
+
+/* Content blocks (converted from table layout) */
+.content-block {
+    margin-bottom: 1.5rem;
+    clear: both;
+}
+
+.content-block::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content-block p:first-child {
+    margin-top: 0;
+}
+
+/* Ensure images in content don't overflow */
+.content-block img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Print styles */
+@media print {
+    .site-header, .site-footer, .main-nav {
+        display: none;
+    }
+
+    .wiki-content {
+        box-shadow: none;
+        padding: 0;
+    }
+}
