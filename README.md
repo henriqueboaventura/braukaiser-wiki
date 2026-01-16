@@ -33,7 +33,7 @@ The original content was published under [Attribution-NonCommercial 3.0 Unported
 
 ```
 index.html          # Main index page
-*.html              # Wiki articles
+pages/*.html        # Wiki articles
 css/style.css       # Stylesheet
 images/             # All images
 documents/          # PDF and Excel files
