@@ -5,23 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Troubleshooting Brewhouse Efficiency - Braukaiser</title>
         <link rel="stylesheet" href="../assets/css/style.css">
+        <script>(function(){try{var t=localStorage.getItem('bk-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     </head>
     <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
         <header class="site-header">
             <div class="header-content">
             <a href="../index.html" class="site-title">
             <h1>Braukaiser</h1>
             <span class="tagline">German Brewing and More</span>
             </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-tools">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="header-tools" id="header-tools">
             <nav class="main-nav">
                 <a href="../index.html">Home</a>
                 <a href="Recipes.html">Recipes</a>
                 <a href="The_Science_of_Mashing.html">Science</a>
                 <a href="Glossary_of_German_Brewing_Terms.html">Glossary</a>
             </nav>
+            <div class="site-search">
+                <input type="search" id="site-search-input" placeholder="Search wiki…" aria-label="Search the wiki" autocomplete="off">
+                <div class="search-results" id="search-results" hidden></div>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">🌙</button>
+            </div>
             </div>
         </header>
-        <main class="main-content">
+        <div id="breadcrumb-slot" class="breadcrumb"></div>
+        <main class="main-content" id="main-content">
             <article class="wiki-content">
                 <h1 class="page-title">Troubleshooting Brewhouse Efficiency</h1>
                 <table style="width:800px" border="0">
@@ -453,5 +466,7 @@
                                                                                                                                                                                     <p>Archived and preserved for the brewing community</p>
                                                                                                                                                                                     </div>
                                                                                                                                                                                 </footer>
-                                                                                                                                                                            </body>
+        <script src="../assets/js/search-index.js" defer></script>
+        <script src="../assets/js/site.js" defer></script>
+    </body>
                                                                                                                                                                         </html>

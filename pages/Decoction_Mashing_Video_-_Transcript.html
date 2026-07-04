@@ -5,24 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decoction Mashing Video - Transcript - Braukaiser</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+        <script>(function(){try{var t=localStorage.getItem('bk-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
         <div class="header-content">
             <a href="../index.html" class="site-title">
                 <h1>Braukaiser</h1>
                 <span class="tagline">German Brewing and More</span>
             </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-tools">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="header-tools" id="header-tools">
             <nav class="main-nav">
                 <a href="../index.html">Home</a>
                 <a href="Recipes.html">Recipes</a>
                 <a href="The_Science_of_Mashing.html">Science</a>
                 <a href="Glossary_of_German_Brewing_Terms.html">Glossary</a>
             </nav>
+            <div class="site-search">
+                <input type="search" id="site-search-input" placeholder="Search wiki…" aria-label="Search the wiki" autocomplete="off">
+                <div class="search-results" id="search-results" hidden></div>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">🌙</button>
+            </div>
         </div>
     </header>
+        <div id="breadcrumb-slot" class="breadcrumb"></div>
 
-    <main class="main-content">
+    <main class="main-content" id="main-content">
         <article class="wiki-content">
             <h1 class="page-title">Decoction Mashing Video - Transcript</h1>
 
@@ -52,7 +65,7 @@
 
             <p><i><b>[show the triple decoction diagram]</b></i></p>
 
-            <p><a href="assets/images/Mash_diagram_tripple_decoction.gif"><img alt="Mash diagram tripple decoction.gif" src="../assets/images/Mash_diagram_tripple_decoction.gif" width="752" height="303"/></a></p>
+            <p><a href="../assets/images/Mash_diagram_tripple_decoction.gif"><img alt="Mash diagram tripple decoction.gif" src="../assets/images/Mash_diagram_tripple_decoction.gif" width="752" height="303"/></a></p>
 
             <p>A triple decoction starts with a dough-in at the acid rest. This rest is held around 35 *C or 97 *F and primarily allows the enzyme phytase to create phytic acid which serves to acidify the mash beyond the acidification that is already happening from a reaction between the water's calcium and magnesium ions and malt's phosphates. This rest also serves to dissolve the malt enzymes into solution and provides a no-rush opportunity for mash pH correction since no significant conversion processes are happening at this temperature.</p>
 
@@ -66,7 +79,7 @@
 
             <p><i><b>[show enhanced double decoction diagram]</b></i></p>
 
-            <p><a href="assets/images/Mash_diagram_double_decoction_enhanced.gif"><img alt="Mash diagram double decoction enhanced.gif" src="../assets/images/Mash_diagram_double_decoction_enhanced.gif" width="680" height="303"/></a></p>
+            <p><a href="../assets/images/Mash_diagram_double_decoction_enhanced.gif"><img alt="Mash diagram double decoction enhanced.gif" src="../assets/images/Mash_diagram_double_decoction_enhanced.gif" width="680" height="303"/></a></p>
 
             <p>When reading a technical brewing textbook I came across this double decoction which boils as much of the mash as a triple decoction but is shorter and allows for a much shorter protein rest which can also be skipped. I'm now using this exclusively as a replacement for triple decoction mashes. This is also the mash that I will be demonstrating today.</p>
 
@@ -74,7 +87,7 @@
 
             <p><i><b>[show Hochkurz decoction diagram]</b></i></p>
 
-            <p><a href="assets/images/Mash_diagram_double_decoction_hochkurz.gif"><img alt="Mash diagram double decoction hochkurz.gif" src="../assets/images/Mash_diagram_double_decoction_hochkurz.gif" width="629" height="304"/></a></p>
+            <p><a href="../assets/images/Mash_diagram_double_decoction_hochkurz.gif"><img alt="Mash diagram double decoction hochkurz.gif" src="../assets/images/Mash_diagram_double_decoction_hochkurz.gif" width="629" height="304"/></a></p>
 
             <p>Another double decoction mash that allows for a shortened or skipped protein rest is the Hochkurz mash. In this mash a 2 stage saccharification is used where the decoction is used to move the mash from the Maltose rest to the dextrinization rest. The 2nd decoction is used to reach mash-out. This mashing schedule is still fairly popular in commercial German brewing.</p>
 
@@ -268,5 +281,7 @@
             <p>Archived and preserved for the brewing community</p>
         </div>
     </footer>
-</body>
+        <script src="../assets/js/search-index.js" defer></script>
+        <script src="../assets/js/site.js" defer></script>
+    </body>
 </html>
